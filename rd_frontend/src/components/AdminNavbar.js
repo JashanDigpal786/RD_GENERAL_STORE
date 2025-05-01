@@ -1,13 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Header() {
+function AdminHeader() {
   return (
     <>
       <div className="container-fluid fixed-top">
         <div className="container px-0">
-          {/* <nav className="navbar navbar-light bg-white navbar-expand-xl"> */}
-          <nav className="navbar navbar-light bg-white navbar-expand-xl  navbar-expand-lg fixed-top">
+          <nav className="navbar navbar-light bg-white navbar-expand-xl">
             <Link to="/" className="navbar-brand">
               <h1 className="text-primary display-6">RD Store</h1>
             </Link>
@@ -29,7 +28,7 @@ function Header() {
                   </div>
                 </div>
                 <Link to="/contact" className="nav-item nav-link"> Contact </Link>
-                <Link to="/login" className="nav-item nav-link"> Login </Link>
+                <Link to="/login" className="nav-item nav-link"> Logout </Link>
               </div>
               {/* <div className="d-flex m-3 me-0">
                 <button className="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"                >
@@ -53,4 +52,4 @@ function Header() {
   )
 }
 
-export default Header
+export default AdminHeader
