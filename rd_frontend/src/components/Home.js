@@ -9,67 +9,29 @@ function Home() {
                     <div className="row g-5 align-items-center">
                         <div className="col-md-12 col-lg-7">
                             <h4 className="mb-3 text-secondary">100% Organic Foods</h4>
-                            <h1 className="mb-5 display-3 text-primary">
-                                Organic Veggies &amp; Fruits Foods
-                            </h1>
+                            <h1 className="mb-5 display-3 text-primary"> Organic Veggies &amp; Fruits Foods </h1>
                             <div className="position-relative mx-auto">
-                                <input
-                                    className="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill"
-                                    type="number"
-                                    placeholder="Search"
-                                />
-                                <button
-                                    type="submit"
-                                    className="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100"
-                                    style={{ top: 0, right: "25%" }}
-                                >
-                                    Submit Now
-                                </button>
+                                <input className="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" type="number" placeholder="Search" />
+                                <button type="submit" className="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100" style={{ top: 0, right: "25%" }}                                >                                    Submit Now                                </button>
                             </div>
                         </div>
                         <div className="col-md-12 col-lg-5">
-                            <div
-                                id="carouselId"
-                                className="carousel slide position-relative"
-                                data-bs-ride="carousel"
-                            >
+                            <div id="carouselId" className="carousel slide position-relative" data-bs-ride="carousel"                            >
                                 <div className="carousel-inner" role="listbox">
                                     <div className="carousel-item active rounded">
-                                        <img
-                                            src="/assets/img/hero-img-1.png"
-                                            className="img-fluid w-100 h-100 bg-secondary rounded"
-                                            alt="First slide"
-                                        />
-                                        <a href="#" className="btn px-4 py-2 text-white rounded">
-                                            Fruites
-                                        </a>
+                                        <img src="/assets/img/hero-img-1.png" className="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide" />
+                                        <a href="#" className="btn px-4 py-2 text-white rounded">                                            Fruites                                        </a>
                                     </div>
                                     <div className="carousel-item rounded">
-                                        <img
-                                            src="/assets/img/hero-img-2.jpg"
-                                            className="img-fluid w-100 h-100 rounded"
-                                            alt="Second slide"
-                                        />
-                                        <a href="#" className="btn px-4 py-2 text-white rounded">
-                                            Vesitables
-                                        </a>
+                                        <img src="/assets/img/hero-img-2.jpg" className="img-fluid w-100 h-100 rounded" alt="Second slide" />
+                                        <a href="#" className="btn px-4 py-2 text-white rounded">                                            Vesitables                                        </a>
                                     </div>
                                 </div>
-                                <button
-                                    className="carousel-control-prev"
-                                    type="button"
-                                    data-bs-target="#carouselId"
-                                    data-bs-slide="prev"
-                                >
+                                <button className="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev"                                >
                                     <span className="carousel-control-prev-icon" aria-hidden="true" />
                                     <span className="visually-hidden">Previous</span>
                                 </button>
-                                <button
-                                    className="carousel-control-next"
-                                    type="button"
-                                    data-bs-target="#carouselId"
-                                    data-bs-slide="next"
-                                >
+                                <button className="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next"                                >
                                     <span className="carousel-control-next-icon" aria-hidden="true" />
                                     <span className="visually-hidden">Next</span>
                                 </button>
@@ -79,6 +41,7 @@ function Home() {
                 </div>
             </div>
             {/* Hero End */}
+
             {/* Featurs Section Start */}
             <div className="container-fluid featurs py-5">
                 <div className="container py-5">
@@ -131,6 +94,7 @@ function Home() {
                 </div>
             </div>
             {/* Featurs Section End */}
+
             {/* Fruits Shop Start*/}
             <div className="container-fluid fruite py-5">
                 <div className="container py-5">
@@ -142,58 +106,28 @@ function Home() {
                             <div className="col-lg-8 text-end">
                                 <ul className="nav nav-pills d-inline-flex text-center mb-5">
                                     <li className="nav-item">
-                                        <a
-                                            className="d-flex m-2 py-2 bg-light rounded-pill active"
-                                            data-bs-toggle="pill"
-                                            href="#tab-1"
-                                        >
-                                            <span className="text-dark" style={{ width: 130 }}>
-                                                All Products
-                                            </span>
+                                        <a className="d-flex m-2 py-2 bg-light rounded-pill active" data-bs-toggle="pill" href="#tab-1"  >
+                                            <span className="text-dark" style={{ width: 130 }}> All Products  </span>
                                         </a>
                                     </li>
                                     <li className="nav-item">
-                                        <a
-                                            className="d-flex py-2 m-2 bg-light rounded-pill"
-                                            data-bs-toggle="pill"
-                                            href="#tab-2"
-                                        >
-                                            <span className="text-dark" style={{ width: 130 }}>
-                                                Vegetables
-                                            </span>
+                                        <a className="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-2"  >
+                                            <span className="text-dark" style={{ width: 130 }}> Vegetables  </span>
                                         </a>
                                     </li>
                                     <li className="nav-item">
-                                        <a
-                                            className="d-flex m-2 py-2 bg-light rounded-pill"
-                                            data-bs-toggle="pill"
-                                            href="#tab-3"
-                                        >
-                                            <span className="text-dark" style={{ width: 130 }}>
-                                                Fruits
-                                            </span>
+                                        <a className="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-3"  >
+                                            <span className="text-dark" style={{ width: 130 }}> Fruits  </span>
                                         </a>
                                     </li>
                                     <li className="nav-item">
-                                        <a
-                                            className="d-flex m-2 py-2 bg-light rounded-pill"
-                                            data-bs-toggle="pill"
-                                            href="#tab-4"
-                                        >
-                                            <span className="text-dark" style={{ width: 130 }}>
-                                                Bread
-                                            </span>
+                                        <a className="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-4"  >
+                                            <span className="text-dark" style={{ width: 130 }}> Bread  </span>
                                         </a>
                                     </li>
                                     <li className="nav-item">
-                                        <a
-                                            className="d-flex m-2 py-2 bg-light rounded-pill"
-                                            data-bs-toggle="pill"
-                                            href="#tab-5"
-                                        >
-                                            <span className="text-dark" style={{ width: 130 }}>
-                                                Meat
-                                            </span>
+                                        <a className="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-5"  >
+                                            <span className="text-dark" style={{ width: 130 }}> Meat  </span>
                                         </a>
                                     </li>
                                 </ul>
@@ -207,11 +141,26 @@ function Home() {
                                             <div className="col-md-6 col-lg-4 col-xl-3">
                                                 <div className="rounded position-relative fruite-item">
                                                     <div className="fruite-img">
-                                                        <img
-                                                            src="img/fruite-item-5.jpg"
-                                                            className="img-fluid w-100 rounded-top"
-                                                            alt=""
-                                                        />
+                                                        <img                                                            src="/assets/img/fruite-item-5.jpg"                                                            className="img-fluid w-100 rounded-top"                                                            alt=""                                                        />
+                                                    </div>
+                                                    <div                                                        className="text-white bg-secondary px-3 py-1 rounded position-absolute"                                                        style={{ top: 10, left: 10 }}                                                    >                                                        Fruits                                                    </div>
+                                                    <div className="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                        <h4>Grapes</h4>
+                                                        <p>                                                            Lorem ipsum dolor sit amet consectetur adipisicing                                                            elit sed do eiusmod te incididunt                                                        </p>
+                                                        <div className="d-flex justify-content-between flex-lg-wrap">
+                                                            <p className="text-dark fs-5 fw-bold mb-0">                                                                $4.99 / kg                                                            </p>
+                                                            <a                                                                href="#"                                                                className="btn border border-secondary rounded-pill px-3 text-primary"                                                            >
+                                                                <i className="fa fa-shopping-bag me-2 text-primary" />{" "}
+                                                                Add to cart
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-md-6 col-lg-4 col-xl-3">
+                                                <div className="rounded position-relative fruite-item">
+                                                    <div className="fruite-img">
+                                                        <img                                                            src="/assets/img/fruite-item-5.jpg"                                                            className="img-fluid w-100 rounded-top"                                                            alt=""                                                        />
                                                     </div>
                                                     <div
                                                         className="text-white bg-secondary px-3 py-1 rounded position-absolute"
@@ -244,43 +193,7 @@ function Home() {
                                                 <div className="rounded position-relative fruite-item">
                                                     <div className="fruite-img">
                                                         <img
-                                                            src="img/fruite-item-5.jpg"
-                                                            className="img-fluid w-100 rounded-top"
-                                                            alt=""
-                                                        />
-                                                    </div>
-                                                    <div
-                                                        className="text-white bg-secondary px-3 py-1 rounded position-absolute"
-                                                        style={{ top: 10, left: 10 }}
-                                                    >
-                                                        Fruits
-                                                    </div>
-                                                    <div className="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                        <h4>Grapes</h4>
-                                                        <p>
-                                                            Lorem ipsum dolor sit amet consectetur adipisicing
-                                                            elit sed do eiusmod te incididunt
-                                                        </p>
-                                                        <div className="d-flex justify-content-between flex-lg-wrap">
-                                                            <p className="text-dark fs-5 fw-bold mb-0">
-                                                                $4.99 / kg
-                                                            </p>
-                                                            <a
-                                                                href="#"
-                                                                className="btn border border-secondary rounded-pill px-3 text-primary"
-                                                            >
-                                                                <i className="fa fa-shopping-bag me-2 text-primary" />{" "}
-                                                                Add to cart
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-6 col-lg-4 col-xl-3">
-                                                <div className="rounded position-relative fruite-item">
-                                                    <div className="fruite-img">
-                                                        <img
-                                                            src="img/fruite-item-2.jpg"
+                                                            src="/assets/img/fruite-item-2.jpg"
                                                             className="img-fluid w-100 rounded-top"
                                                             alt=""
                                                         />
@@ -316,7 +229,7 @@ function Home() {
                                                 <div className="rounded position-relative fruite-item">
                                                     <div className="fruite-img">
                                                         <img
-                                                            src="img/fruite-item-4.jpg"
+                                                            src="/assets/img/fruite-item-4.jpg"
                                                             className="img-fluid w-100 rounded-top"
                                                             alt=""
                                                         />
@@ -352,7 +265,7 @@ function Home() {
                                                 <div className="rounded position-relative fruite-item">
                                                     <div className="fruite-img">
                                                         <img
-                                                            src="img/fruite-item-3.jpg"
+                                                            src="/assets/img/fruite-item-3.jpg"
                                                             className="img-fluid w-100 rounded-top"
                                                             alt=""
                                                         />
@@ -388,7 +301,7 @@ function Home() {
                                                 <div className="rounded position-relative fruite-item">
                                                     <div className="fruite-img">
                                                         <img
-                                                            src="img/fruite-item-1.jpg"
+                                                            src="/assets/img/fruite-item-1.jpg"
                                                             className="img-fluid w-100 rounded-top"
                                                             alt=""
                                                         />
@@ -424,7 +337,7 @@ function Home() {
                                                 <div className="rounded position-relative fruite-item">
                                                     <div className="fruite-img">
                                                         <img
-                                                            src="img/fruite-item-2.jpg"
+                                                            src="/assets/img/fruite-item-2.jpg"
                                                             className="img-fluid w-100 rounded-top"
                                                             alt=""
                                                         />
@@ -460,7 +373,7 @@ function Home() {
                                                 <div className="rounded position-relative fruite-item">
                                                     <div className="fruite-img">
                                                         <img
-                                                            src="img/fruite-item-5.jpg"
+                                                            src="/assets/img/fruite-item-5.jpg"
                                                             className="img-fluid w-100 rounded-top"
                                                             alt=""
                                                         />
@@ -504,7 +417,7 @@ function Home() {
                                                 <div className="rounded position-relative fruite-item">
                                                     <div className="fruite-img">
                                                         <img
-                                                            src="img/fruite-item-5.jpg"
+                                                            src="/assets/img/fruite-item-5.jpg"
                                                             className="img-fluid w-100 rounded-top"
                                                             alt=""
                                                         />
@@ -540,7 +453,7 @@ function Home() {
                                                 <div className="rounded position-relative fruite-item">
                                                     <div className="fruite-img">
                                                         <img
-                                                            src="img/fruite-item-2.jpg"
+                                                            src="/assets/img/fruite-item-2.jpg"
                                                             className="img-fluid w-100 rounded-top"
                                                             alt=""
                                                         />
@@ -584,7 +497,7 @@ function Home() {
                                                 <div className="rounded position-relative fruite-item">
                                                     <div className="fruite-img">
                                                         <img
-                                                            src="img/fruite-item-1.jpg"
+                                                            src="/assets/img/fruite-item-1.jpg"
                                                             className="img-fluid w-100 rounded-top"
                                                             alt=""
                                                         />
@@ -620,7 +533,7 @@ function Home() {
                                                 <div className="rounded position-relative fruite-item">
                                                     <div className="fruite-img">
                                                         <img
-                                                            src="img/fruite-item-6.jpg"
+                                                            src="/assets/img/fruite-item-6.jpg"
                                                             className="img-fluid w-100 rounded-top"
                                                             alt=""
                                                         />
@@ -664,7 +577,7 @@ function Home() {
                                                 <div className="rounded position-relative fruite-item">
                                                     <div className="fruite-img">
                                                         <img
-                                                            src="img/fruite-item-5.jpg"
+                                                            src="/assets/img/fruite-item-5.jpg"
                                                             className="img-fluid w-100 rounded-top"
                                                             alt=""
                                                         />
@@ -700,7 +613,7 @@ function Home() {
                                                 <div className="rounded position-relative fruite-item">
                                                     <div className="fruite-img">
                                                         <img
-                                                            src="img/fruite-item-4.jpg"
+                                                            src="/assets/img/fruite-item-4.jpg"
                                                             className="img-fluid w-100 rounded-top"
                                                             alt=""
                                                         />
@@ -744,7 +657,7 @@ function Home() {
                                                 <div className="rounded position-relative fruite-item">
                                                     <div className="fruite-img">
                                                         <img
-                                                            src="img/fruite-item-3.jpg"
+                                                            src="/assets/img/fruite-item-3.jpg"
                                                             className="img-fluid w-100 rounded-top"
                                                             alt=""
                                                         />
@@ -780,7 +693,7 @@ function Home() {
                                                 <div className="rounded position-relative fruite-item">
                                                     <div className="fruite-img">
                                                         <img
-                                                            src="img/fruite-item-2.jpg"
+                                                            src="/assets/img/fruite-item-2.jpg"
                                                             className="img-fluid w-100 rounded-top"
                                                             alt=""
                                                         />
@@ -816,7 +729,7 @@ function Home() {
                                                 <div className="rounded position-relative fruite-item">
                                                     <div className="fruite-img">
                                                         <img
-                                                            src="img/fruite-item-1.jpg"
+                                                            src="/assets/img/fruite-item-1.jpg"
                                                             className="img-fluid w-100 rounded-top"
                                                             alt=""
                                                         />
@@ -865,7 +778,7 @@ function Home() {
                             <a href="#">
                                 <div className="service-item bg-secondary rounded border border-secondary">
                                     <img
-                                        src="img/featur-1.jpg"
+                                        src="/assets/img/featur-1.jpg"
                                         className="img-fluid rounded-top w-100"
                                         alt=""
                                     />
@@ -882,7 +795,7 @@ function Home() {
                             <a href="#">
                                 <div className="service-item bg-dark rounded border border-dark">
                                     <img
-                                        src="img/featur-2.jpg"
+                                        src="/assets/img/featur-2.jpg"
                                         className="img-fluid rounded-top w-100"
                                         alt=""
                                     />
@@ -899,7 +812,7 @@ function Home() {
                             <a href="#">
                                 <div className="service-item bg-primary rounded border border-primary">
                                     <img
-                                        src="img/featur-3.jpg"
+                                        src="/assets/img/featur-3.jpg"
                                         className="img-fluid rounded-top w-100"
                                         alt=""
                                     />
@@ -924,7 +837,7 @@ function Home() {
                         <div className="border border-primary rounded position-relative vesitable-item">
                             <div className="vesitable-img">
                                 <img
-                                    src="img/vegetable-item-6.jpg"
+                                    src="/assets/img/vegetable-item-6.jpg"
                                     className="img-fluid w-100 rounded-top"
                                     alt=""
                                 />
@@ -956,7 +869,7 @@ function Home() {
                         <div className="border border-primary rounded position-relative vesitable-item">
                             <div className="vesitable-img">
                                 <img
-                                    src="img/vegetable-item-1.jpg"
+                                    src="/assets/img/vegetable-item-1.jpg"
                                     className="img-fluid w-100 rounded-top"
                                     alt=""
                                 />
@@ -988,7 +901,7 @@ function Home() {
                         <div className="border border-primary rounded position-relative vesitable-item">
                             <div className="vesitable-img">
                                 <img
-                                    src="img/vegetable-item-3.png"
+                                    src="/assets/img/vegetable-item-3.png"
                                     className="img-fluid w-100 rounded-top bg-light"
                                     alt=""
                                 />
@@ -1020,7 +933,7 @@ function Home() {
                         <div className="border border-primary rounded position-relative vesitable-item">
                             <div className="vesitable-img">
                                 <img
-                                    src="img/vegetable-item-4.jpg"
+                                    src="/assets/img/vegetable-item-4.jpg"
                                     className="img-fluid w-100 rounded-top"
                                     alt=""
                                 />
@@ -1052,7 +965,7 @@ function Home() {
                         <div className="border border-primary rounded position-relative vesitable-item">
                             <div className="vesitable-img">
                                 <img
-                                    src="img/vegetable-item-5.jpg"
+                                    src="/assets/img/vegetable-item-5.jpg"
                                     className="img-fluid w-100 rounded-top"
                                     alt=""
                                 />
@@ -1084,7 +997,7 @@ function Home() {
                         <div className="border border-primary rounded position-relative vesitable-item">
                             <div className="vesitable-img">
                                 <img
-                                    src="img/vegetable-item-6.jpg"
+                                    src="/assets/img/vegetable-item-6.jpg"
                                     className="img-fluid w-100 rounded-top"
                                     alt=""
                                 />
@@ -1116,7 +1029,7 @@ function Home() {
                         <div className="border border-primary rounded position-relative vesitable-item">
                             <div className="vesitable-img">
                                 <img
-                                    src="img/vegetable-item-5.jpg"
+                                    src="/assets/img/vegetable-item-5.jpg"
                                     className="img-fluid w-100 rounded-top"
                                     alt=""
                                 />
@@ -1148,7 +1061,7 @@ function Home() {
                         <div className="border border-primary rounded position-relative vesitable-item">
                             <div className="vesitable-img">
                                 <img
-                                    src="img/vegetable-item-6.jpg"
+                                    src="/assets/img/vegetable-item-6.jpg"
                                     className="img-fluid w-100 rounded-top"
                                     alt=""
                                 />
@@ -1204,7 +1117,7 @@ function Home() {
                         <div className="col-lg-6">
                             <div className="position-relative">
                                 <img
-                                    src="img/baner-1.png"
+                                    src="/assets/img/baner-1.png"
                                     className="img-fluid w-100 rounded"
                                     alt=""
                                 />
@@ -1240,7 +1153,7 @@ function Home() {
                                 <div className="row align-items-center">
                                     <div className="col-6">
                                         <img
-                                            src="img/best-product-1.jpg"
+                                            src="/assets/img/best-product-1.jpg"
                                             className="img-fluid rounded-circle w-100"
                                             alt=""
                                         />
@@ -1273,7 +1186,7 @@ function Home() {
                                 <div className="row align-items-center">
                                     <div className="col-6">
                                         <img
-                                            src="img/best-product-2.jpg"
+                                            src="/assets/img/best-product-2.jpg"
                                             className="img-fluid rounded-circle w-100"
                                             alt=""
                                         />
@@ -1306,7 +1219,7 @@ function Home() {
                                 <div className="row align-items-center">
                                     <div className="col-6">
                                         <img
-                                            src="img/best-product-3.jpg"
+                                            src="/assets/img/best-product-3.jpg"
                                             className="img-fluid rounded-circle w-100"
                                             alt=""
                                         />
@@ -1339,7 +1252,7 @@ function Home() {
                                 <div className="row align-items-center">
                                     <div className="col-6">
                                         <img
-                                            src="img/best-product-4.jpg"
+                                            src="/assets/img/best-product-4.jpg"
                                             className="img-fluid rounded-circle w-100"
                                             alt=""
                                         />
@@ -1372,7 +1285,7 @@ function Home() {
                                 <div className="row align-items-center">
                                     <div className="col-6">
                                         <img
-                                            src="img/best-product-5.jpg"
+                                            src="/assets/img/best-product-5.jpg"
                                             className="img-fluid rounded-circle w-100"
                                             alt=""
                                         />
@@ -1405,7 +1318,7 @@ function Home() {
                                 <div className="row align-items-center">
                                     <div className="col-6">
                                         <img
-                                            src="img/best-product-6.jpg"
+                                            src="/assets/img/best-product-6.jpg"
                                             className="img-fluid rounded-circle w-100"
                                             alt=""
                                         />
@@ -1436,7 +1349,7 @@ function Home() {
                         <div className="col-md-6 col-lg-6 col-xl-3">
                             <div className="text-center">
                                 <img
-                                    src="img/fruite-item-1.jpg"
+                                    src="/assets/img/fruite-item-1.jpg"
                                     className="img-fluid rounded"
                                     alt=""
                                 />
@@ -1465,7 +1378,7 @@ function Home() {
                         <div className="col-md-6 col-lg-6 col-xl-3">
                             <div className="text-center">
                                 <img
-                                    src="img/fruite-item-2.jpg"
+                                    src="/assets/img/fruite-item-2.jpg"
                                     className="img-fluid rounded"
                                     alt=""
                                 />
@@ -1494,7 +1407,7 @@ function Home() {
                         <div className="col-md-6 col-lg-6 col-xl-3">
                             <div className="text-center">
                                 <img
-                                    src="img/fruite-item-3.jpg"
+                                    src="/assets/img/fruite-item-3.jpg"
                                     className="img-fluid rounded"
                                     alt=""
                                 />
@@ -1523,7 +1436,7 @@ function Home() {
                         <div className="col-md-6 col-lg-6 col-xl-3">
                             <div className="text-center">
                                 <img
-                                    src="img/fruite-item-4.jpg"
+                                    src="/assets/img/fruite-item-4.jpg"
                                     className="img-fluid rounded"
                                     alt=""
                                 />
@@ -1614,7 +1527,7 @@ function Home() {
                                 <div className="d-flex align-items-center flex-nowrap">
                                     <div className="bg-secondary rounded">
                                         <img
-                                            src="img/testimonial-1.jpg"
+                                            src="/assets/img/testimonial-1.jpg"
                                             className="img-fluid rounded"
                                             style={{ width: 100, height: 100 }}
                                             alt=""
@@ -1649,7 +1562,7 @@ function Home() {
                                 <div className="d-flex align-items-center flex-nowrap">
                                     <div className="bg-secondary rounded">
                                         <img
-                                            src="img/testimonial-1.jpg"
+                                            src="/assets/img/testimonial-1.jpg"
                                             className="img-fluid rounded"
                                             style={{ width: 100, height: 100 }}
                                             alt=""
@@ -1684,7 +1597,7 @@ function Home() {
                                 <div className="d-flex align-items-center flex-nowrap">
                                     <div className="bg-secondary rounded">
                                         <img
-                                            src="img/testimonial-1.jpg"
+                                            src="/assets/img/testimonial-1.jpg"
                                             className="img-fluid rounded"
                                             style={{ width: 100, height: 100 }}
                                             alt=""

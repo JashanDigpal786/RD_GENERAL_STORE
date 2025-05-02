@@ -10,13 +10,13 @@ function ShopDetail() {
                             <div className="row g-4">
                                 <div className="col-lg-6">
                                     <div className="border rounded">
-                                        <a href="#">
+                                        <div className="image-container">
                                             <img
                                                 src="/assets/img/single-item.jpg"
                                                 className="img-fluid rounded"
                                                 alt="Image"
                                             />
-                                        </a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
@@ -164,7 +164,7 @@ function ShopDetail() {
                                         >
                                             <div className="d-flex">
                                                 <img
-                                                    src="img/avatar.jpg"
+                                                    src="/assets/img/avatar.jpg"
                                                     className="img-fluid rounded-circle p-3"
                                                     style={{ width: 100, height: 100 }}
                                                     alt=""
@@ -192,7 +192,7 @@ function ShopDetail() {
                                             </div>
                                             <div className="d-flex">
                                                 <img
-                                                    src="img/avatar.jpg"
+                                                    src="/assets/img/avatar.jpg"
                                                     className="img-fluid rounded-circle p-3"
                                                     style={{ width: 100, height: 100 }}
                                                     alt=""
@@ -364,7 +364,7 @@ function ShopDetail() {
                                     <div className="d-flex align-items-center justify-content-start">
                                         <div className="rounded" style={{ width: 100, height: 100 }}>
                                             <img
-                                                src="img/featur-1.jpg"
+                                                src="/assets/img/featur-1.jpg"
                                                 className="img-fluid rounded"
                                                 alt="Image"
                                             />
@@ -389,7 +389,7 @@ function ShopDetail() {
                                     <div className="d-flex align-items-center justify-content-start">
                                         <div className="rounded" style={{ width: 100, height: 100 }}>
                                             <img
-                                                src="img/featur-2.jpg"
+                                                src="/assets/img/featur-2.jpg"
                                                 className="img-fluid rounded"
                                                 alt=""
                                             />
@@ -414,7 +414,7 @@ function ShopDetail() {
                                     <div className="d-flex align-items-center justify-content-start">
                                         <div className="rounded" style={{ width: 100, height: 100 }}>
                                             <img
-                                                src="img/featur-3.jpg"
+                                                src="/assets/img/featur-3.jpg"
                                                 className="img-fluid rounded"
                                                 alt=""
                                             />
@@ -439,7 +439,7 @@ function ShopDetail() {
                                     <div className="d-flex align-items-center justify-content-start">
                                         <div className="rounded me-4" style={{ width: 100, height: 100 }}>
                                             <img
-                                                src="img/vegetable-item-4.jpg"
+                                                src="/assets/img/vegetable-item-4.jpg"
                                                 className="img-fluid rounded"
                                                 alt=""
                                             />
@@ -464,7 +464,7 @@ function ShopDetail() {
                                     <div className="d-flex align-items-center justify-content-start">
                                         <div className="rounded me-4" style={{ width: 100, height: 100 }}>
                                             <img
-                                                src="img/vegetable-item-5.jpg"
+                                                src="/assets/img/vegetable-item-5.jpg"
                                                 className="img-fluid rounded"
                                                 alt=""
                                             />
@@ -489,7 +489,7 @@ function ShopDetail() {
                                     <div className="d-flex align-items-center justify-content-start">
                                         <div className="rounded me-4" style={{ width: 100, height: 100 }}>
                                             <img
-                                                src="img/vegetable-item-6.jpg"
+                                                src="/assets/img/vegetable-item-6.jpg"
                                                 className="img-fluid rounded"
                                                 alt=""
                                             />
@@ -523,7 +523,7 @@ function ShopDetail() {
                                 <div className="col-lg-12">
                                     <div className="position-relative">
                                         <img
-                                            src="img/banner-fruits.jpg"
+                                            src="/assets/img/banner-fruits.jpg"
                                             className="img-fluid w-100 rounded"
                                             alt=""
                                         />
@@ -541,12 +541,13 @@ function ShopDetail() {
                         </div>
                     </div>
                     <h1 className="fw-bold mb-0">Related products</h1>
+                
                     <div className="vesitable">
                         <div className="owl-carousel vegetable-carousel justify-content-center">
                             <div className="border border-primary rounded position-relative vesitable-item">
                                 <div className="vesitable-img">
                                     <img
-                                        src="img/vegetable-item-6.jpg"
+                                        src="/assets/img/vegetable-item-6.jpg"
                                         className="img-fluid w-100 rounded-top"
                                         alt=""
                                     />
@@ -578,7 +579,7 @@ function ShopDetail() {
                             <div className="border border-primary rounded position-relative vesitable-item">
                                 <div className="vesitable-img">
                                     <img
-                                        src="img/vegetable-item-1.jpg"
+                                        src="/assets/img/vegetable-item-1.jpg"
                                         className="img-fluid w-100 rounded-top"
                                         alt=""
                                     />
@@ -610,7 +611,7 @@ function ShopDetail() {
                             <div className="border border-primary rounded position-relative vesitable-item">
                                 <div className="vesitable-img">
                                     <img
-                                        src="img/vegetable-item-3.png"
+                                        src="/assets/img/vegetable-item-3.png"
                                         className="img-fluid w-100 rounded-top bg-light"
                                         alt=""
                                     />
@@ -642,7 +643,7 @@ function ShopDetail() {
                             <div className="border border-primary rounded position-relative vesitable-item">
                                 <div className="vesitable-img">
                                     <img
-                                        src="img/vegetable-item-4.jpg"
+                                        src="/assets/img/vegetable-item-4.jpg"
                                         className="img-fluid w-100 rounded-top"
                                         alt=""
                                     />
@@ -674,7 +675,7 @@ function ShopDetail() {
                             <div className="border border-primary rounded position-relative vesitable-item">
                                 <div className="vesitable-img">
                                     <img
-                                        src="img/vegetable-item-5.jpg"
+                                        src="/assets/img/vegetable-item-5.jpg"
                                         className="img-fluid w-100 rounded-top"
                                         alt=""
                                     />
@@ -706,7 +707,7 @@ function ShopDetail() {
                             <div className="border border-primary rounded position-relative vesitable-item">
                                 <div className="vesitable-img">
                                     <img
-                                        src="img/vegetable-item-6.jpg"
+                                        src="/assets/img/vegetable-item-6.jpg"
                                         className="img-fluid w-100 rounded-top"
                                         alt=""
                                     />
@@ -738,7 +739,7 @@ function ShopDetail() {
                             <div className="border border-primary rounded position-relative vesitable-item">
                                 <div className="vesitable-img">
                                     <img
-                                        src="img/vegetable-item-5.jpg"
+                                        src="/assets/img/vegetable-item-5.jpg"
                                         className="img-fluid w-100 rounded-top"
                                         alt=""
                                     />
@@ -770,7 +771,7 @@ function ShopDetail() {
                             <div className="border border-primary rounded position-relative vesitable-item">
                                 <div className="vesitable-img">
                                     <img
-                                        src="img/vegetable-item-6.jpg"
+                                        src="/assets/img/vegetable-item-6.jpg"
                                         className="img-fluid w-100 rounded-top"
                                         alt=""
                                     />
@@ -798,6 +799,13 @@ function ShopDetail() {
                                         </a>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="vegetable">
+                        <div className="vegetable-item">
+                            <div className="vegetable-img">
+                                <img src="/assets/img/vegetable-item-6.jpg" alt="Vegetable" />
                             </div>
                         </div>
                     </div>

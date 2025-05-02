@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+
 import Master from './components/Master';
 import Home from './components/Home';
 import Shop from './components/Shop';
@@ -8,9 +9,12 @@ import Testimonial from './components/Testimonial';
 import Checkout from './components/Checkout';
 import Cart from './components/Cart';
 import Page404 from './components/Page404';
-import Login from './components/Login';
 import Contact from './components/Contact';
+import Login from './components/Login';
+
 import AdminMaster from './components/AdminMaster';
+// import AdminCategory from './components/AdminCategory';
+// import AdminProduct from './components/AdminProduct';
 import { ToastContainer, Bounce } from 'react-toastify';
 
 function App() {
@@ -25,30 +29,19 @@ function App() {
             <Route path="/testimonial" element={<Testimonial />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/login" element={<Login />} />
             <Route path="/page404" element={<Page404 />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
           </Route>
 
           <Route path='/admin' element={<AdminMaster />}>
-
+            {/* <Route path='/category' element={<AdminCategory />} />
+            <Route path='/product' element={<AdminProduct />} /> */}
           </Route>
         </Routes>
       </BrowserRouter>
 
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick={false}
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-        transition={Bounce}
-      />
+      <ToastContainer theme="light" position="top-center" transition={Bounce} autoClose={5000} rtl={false} newestOnTop={false} closeOnClick={false} hideProgressBar={false} pauseOnFocusLoss draggable pauseOnHover />
     </>
   );
 }

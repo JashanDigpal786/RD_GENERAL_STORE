@@ -322,6 +322,10 @@
 
 
 /*** vesitable Start ***/
+.vesitable{
+    background-color: black;
+}
+
 .vesitable .vesitable-item {
     height: 100%;
     transition: 0.5s;

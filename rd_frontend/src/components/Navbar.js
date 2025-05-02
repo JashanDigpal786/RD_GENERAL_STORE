@@ -7,7 +7,7 @@ function Header() {
       <div className="container-fluid fixed-top">
         <div className="container px-0">
           {/* <nav className="navbar navbar-light bg-white navbar-expand-xl"> */}
-          <nav className="navbar navbar-light bg-white navbar-expand-xl  navbar-expand-lg fixed-top">
+          <nav className="navbar navbar-light bg-white navbar-expand-xl navbar-expand-lg fixed-top">
             <Link to="/" className="navbar-brand">
               <h1 className="text-primary display-6">RD Store</h1>
             </Link>
@@ -16,9 +16,10 @@ function Header() {
             </button>
             <div className="collapse navbar-collapse bg-white" id="navbarCollapse">
               <div className="navbar-nav mx-auto">
-                <Link to="/" className="nav-item nav-link active"> Home </Link>
+                <Link to="/" className="nav-item nav-link "> Home </Link>
                 <Link to="/shop" className="nav-item nav-link"> Shop </Link>
                 <Link to="/shopdetail" className="nav-item nav-link"> Shop Detail </Link>
+                <Link to="/contact" className="nav-item nav-link"> Contact </Link>
                 <div className="nav-item dropdown">
                   <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown"> Pages </a>
                   <div className="dropdown-menu m-0 bg-secondary rounded-0">
@@ -28,7 +29,6 @@ function Header() {
                     <Link to="/page404" className="dropdown-item"> 404 Page </Link>
                   </div>
                 </div>
-                <Link to="/contact" className="nav-item nav-link"> Contact </Link>
                 <Link to="/login" className="nav-item nav-link"> Login </Link>
               </div>
               {/* <div className="d-flex m-3 me-0">

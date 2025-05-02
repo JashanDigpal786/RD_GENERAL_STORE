@@ -127,7 +127,7 @@ function Checkout() {
                                                 <th scope="row">
                                                     <div className="d-flex align-items-center mt-2">
                                                         <img
-                                                            src="img/vegetable-item-2.jpg"
+                                                            src="/assets/img/vegetable-item-2.jpg"
                                                             className="img-fluid rounded-circle"
                                                             style={{ width: 90, height: 90 }}
                                                             alt=""
@@ -143,7 +143,7 @@ function Checkout() {
                                                 <th scope="row">
                                                     <div className="d-flex align-items-center mt-2">
                                                         <img
-                                                            src="img/vegetable-item-5.jpg"
+                                                            src="/assets/img/vegetable-item-5.jpg"
                                                             className="img-fluid rounded-circle"
                                                             style={{ width: 90, height: 90 }}
                                                             alt=""
@@ -159,7 +159,7 @@ function Checkout() {
                                                 <th scope="row">
                                                     <div className="d-flex align-items-center mt-2">
                                                         <img
-                                                            src="img/vegetable-item-3.png"
+                                                            src="/assets/img/vegetable-item-3.png"
                                                             className="img-fluid rounded-circle"
                                                             style={{ width: 90, height: 90 }}
                                                             alt=""

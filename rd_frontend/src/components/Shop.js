@@ -272,7 +272,7 @@ function Shop() {
                                         <div className="col-lg-12">
                                             <div className="position-relative">
                                                 <img
-                                                    src="img/banner-fruits.jpg"
+                                                    src="/assets/img/banner-fruits.jpg"
                                                     className="img-fluid w-100 rounded"
                                                     alt=""
                                                 />
@@ -298,7 +298,7 @@ function Shop() {
                                             <div className="rounded position-relative fruite-item">
                                                 <div className="fruite-img">
                                                     <img
-                                                        src="img/fruite-item-5.jpg"
+                                                        src="/assets/img/fruite-item-5.jpg"
                                                         className="img-fluid w-100 rounded-top"
                                                         alt=""
                                                     />
@@ -332,7 +332,7 @@ function Shop() {
                                             <div className="rounded position-relative fruite-item">
                                                 <div className="fruite-img">
                                                     <img
-                                                        src="img/fruite-item-5.jpg"
+                                                        src="/assets/img/fruite-item-5.jpg"
                                                         className="img-fluid w-100 rounded-top"
                                                         alt=""
                                                     />
@@ -366,7 +366,7 @@ function Shop() {
                                             <div className="rounded position-relative fruite-item">
                                                 <div className="fruite-img">
                                                     <img
-                                                        src="img/fruite-item-2.jpg"
+                                                        src="/assets/img/fruite-item-2.jpg"
                                                         className="img-fluid w-100 rounded-top"
                                                         alt=""
                                                     />
@@ -400,7 +400,7 @@ function Shop() {
                                             <div className="rounded position-relative fruite-item">
                                                 <div className="fruite-img">
                                                     <img
-                                                        src="img/fruite-item-4.jpg"
+                                                        src="/assets/img/fruite-item-4.jpg"
                                                         className="img-fluid w-100 rounded-top"
                                                         alt=""
                                                     />
@@ -434,7 +434,7 @@ function Shop() {
                                             <div className="rounded position-relative fruite-item">
                                                 <div className="fruite-img">
                                                     <img
-                                                        src="img/fruite-item-3.jpg"
+                                                        src="/assets/img/fruite-item-3.jpg"
                                                         className="img-fluid w-100 rounded-top"
                                                         alt=""
                                                     />
@@ -468,7 +468,7 @@ function Shop() {
                                             <div className="rounded position-relative fruite-item">
                                                 <div className="fruite-img">
                                                     <img
-                                                        src="img/fruite-item-1.jpg"
+                                                        src="/assets/img/fruite-item-1.jpg"
                                                         className="img-fluid w-100 rounded-top"
                                                         alt=""
                                                     />
@@ -502,7 +502,7 @@ function Shop() {
                                             <div className="rounded position-relative fruite-item">
                                                 <div className="fruite-img">
                                                     <img
-                                                        src="img/fruite-item-2.jpg"
+                                                        src="/assets/img/fruite-item-2.jpg"
                                                         className="img-fluid w-100 rounded-top"
                                                         alt=""
                                                     />
@@ -536,7 +536,7 @@ function Shop() {
                                             <div className="rounded position-relative fruite-item">
                                                 <div className="fruite-img">
                                                     <img
-                                                        src="img/fruite-item-5.jpg"
+                                                        src="/assets/img/fruite-item-5.jpg"
                                                         className="img-fluid w-100 rounded-top"
                                                         alt=""
                                                     />
@@ -570,7 +570,7 @@ function Shop() {
                                             <div className="rounded position-relative fruite-item">
                                                 <div className="fruite-img">
                                                     <img
-                                                        src="img/fruite-item-1.jpg"
+                                                        src="/assets/img/fruite-item-1.jpg"
                                                         className="img-fluid w-100 rounded-top"
                                                         alt=""
                                                     />
