@@ -5,10 +5,8 @@ export default function Footer() {
     <>
       <div className="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
         <div className="container py-5">
-          <div
-            className="pb-4 mb-4"
-            style={{ borderBottom: "1px solid rgba(226, 175, 24, 0.5)" }}
-          >
+          
+          <div className="pb-4 mb-4" style={{ borderBottom: "1px solid rgba(226, 175, 24, 0.5)" }}>
             <div className="row g-4">
               <div className="col-lg-3">
                 <a href="#">
@@ -18,110 +16,49 @@ export default function Footer() {
               </div>
               <div className="col-lg-6">
                 <div className="position-relative mx-auto">
-                  <input
-                    className="form-control border-0 w-100 py-3 px-4 rounded-pill"
-                    type="email"
-                    placeholder="Your Email"
-                  />
-                  <button
-                    type="submit"
-                    className="btn btn-primary border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white"
-                    style={{ top: 0, right: 0 }}
-                  >
-                    Subscribe Now
-                  </button>
+                  <input className="form-control border-0 w-100 py-3 px-4 rounded-pill" type="email" placeholder="Your Email" />
+                  <button type="submit" className="btn btn-primary border-0 border-secondary py-3 px-4 position-absolute rounded-pill text-white" style={{ top: 0, right: 0 }}>  Subscribe Now</button>
                 </div>
               </div>
               <div className="col-lg-3">
                 <div className="d-flex justify-content-end pt-3">
-                  <a
-                    className="btn  btn-outline-secondary me-2 btn-md-square rounded-circle"
-                    href=""
-                  >
-                    <i className="fab fa-twitter" />
-                  </a>
-                  <a
-                    className="btn btn-outline-secondary me-2 btn-md-square rounded-circle"
-                    href=""
-                  >
-                    <i className="fab fa-facebook-f" />
-                  </a>
-                  <a
-                    className="btn btn-outline-secondary me-2 btn-md-square rounded-circle"
-                    href=""
-                  >
-                    <i className="fab fa-youtube" />
-                  </a>
-                  <a
-                    className="btn btn-outline-secondary btn-md-square rounded-circle"
-                    href=""
-                  >
-                    <i className="fab fa-linkedin-in" />
-                  </a>
+                  <a className="btn  btn-outline-secondary me-2 btn-md-square rounded-circle" href="">  <i className="fab fa-twitter" /></a>
+                  <a className="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href="">  <i className="fab fa-facebook-f" /></a>
+                  <a className="btn btn-outline-secondary me-2 btn-md-square rounded-circle" href="">  <i className="fab fa-youtube" /></a>
+                  <a className="btn btn-outline-secondary btn-md-square rounded-circle" href="">  <i className="fab fa-linkedin-in" /></a>
                 </div>
               </div>
             </div>
           </div>
+
           <div className="row g-5">
             <div className="col-lg-3 col-md-6">
               <div className="footer-item">
                 <h4 className="text-light mb-3">Why People Like us!</h4>
-                <p className="mb-4">
-                  typesetting, remaining essentially unchanged. It was popularised in
-                  the 1960s with the like Aldus PageMaker including of Lorem Ipsum.
-                </p>
-                <a
-                  href=""
-                  className="btn border-secondary py-2 px-4 rounded-pill text-primary"
-                >
-                  Read More
-                </a>
+                <p className="mb-4">  typesetting, remaining essentially unchanged. It was popularised in  the 1960s with the like Aldus PageMaker including of Lorem Ipsum.</p>
+                <a href="" className="btn border-secondary py-2 px-4 rounded-pill text-primary">  Read More</a>
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
               <div className="d-flex flex-column text-start footer-item">
                 <h4 className="text-light mb-3">Shop Info</h4>
-                <a className="btn-link" href="">
-                  About Us
-                </a>
-                <a className="btn-link" href="">
-                  Contact Us
-                </a>
-                <a className="btn-link" href="">
-                  Privacy Policy
-                </a>
-                <a className="btn-link" href="">
-                  Terms &amp; Condition
-                </a>
-                <a className="btn-link" href="">
-                  Return Policy
-                </a>
-                <a className="btn-link" href="">
-                  FAQs &amp; Help
-                </a>
+                <a className="btn-link" href="">  About Us</a>
+                <a className="btn-link" href="">  Contact Us</a>
+                <a className="btn-link" href="">  Privacy Policy</a>
+                <a className="btn-link" href="">  Terms &amp; Condition</a>
+                <a className="btn-link" href="">  Return Policy</a>
+                <a className="btn-link" href="">  FAQs &amp; Help</a>
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
               <div className="d-flex flex-column text-start footer-item">
                 <h4 className="text-light mb-3">Account</h4>
-                <a className="btn-link" href="">
-                  My Account
-                </a>
-                <a className="btn-link" href="">
-                  Shop details
-                </a>
-                <a className="btn-link" href="">
-                  Shopping Cart
-                </a>
-                <a className="btn-link" href="">
-                  Wishlist
-                </a>
-                <a className="btn-link" href="">
-                  Order History
-                </a>
-                <a className="btn-link" href="">
-                  International Orders
-                </a>
+                <a className="btn-link" href="">  My Account</a>
+                <a className="btn-link" href="">  Shop details</a>
+                <a className="btn-link" href="">  Shopping Cart</a>
+                <a className="btn-link" href="">  Wishlist</a>
+                <a className="btn-link" href="">  Order History</a>
+                <a className="btn-link" href="">  International Orders</a>
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
@@ -135,6 +72,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
+
         </div>
       </div>
 
@@ -143,28 +81,21 @@ export default function Footer() {
           <div className="row">
             <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
               <span className="text-light">
-                <a href="#">
-                  <i className="fas fa-copyright text-light me-2" />
-                  Your Site Name
-                </a>
+                <a href="#">  <i className="fas fa-copyright text-light me-2" />  RD Store</a>
                 , All right reserved.
               </span>
             </div>
             <div className="col-md-6 my-auto text-center text-md-end text-white">
               Designed By{" "}
-              <a className="border-bottom" href="https://htmlcodex.com">
-                HTML Codex
-              </a>{" "}
-              Distributed By{" "}
-              <a className="border-bottom" href="https://themewagon.com">
-                ThemeWagon
-              </a>
+              <a className="border-bottom" href="https://htmlcodex.com">  HTML Codex</a>
+              {" "}Distributed By{" "}
+              <a className="border-bottom" href="https://themewagon.com">  ThemeWagon</a>
             </div>
           </div>
         </div>
       </div>
-      
-      <div className="container topbar bg-primary d-none d-lg-block">
+
+      {/* <div className="container topbar bg-primary d-none d-lg-block">
           <div className="d-flex justify-content-between">
             <div className="top-info ps-2">
               <small className="me-3">
@@ -192,7 +123,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
 
     </>
   )

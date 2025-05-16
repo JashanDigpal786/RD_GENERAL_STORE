@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './App.css';
+import { ToastContainer, Bounce } from 'react-toastify';
+
 import Master from './components/Master';
 import Home from './components/Home';
 import Shop from './components/Shop';
@@ -10,8 +11,10 @@ import Cart from './components/Cart';
 import Page404 from './components/Page404';
 import Login from './components/Login';
 import Contact from './components/Contact';
+
 import AdminMaster from './components/AdminMaster';
-import { ToastContainer, Bounce } from 'react-toastify';
+import AdminProduct from './components/AdminProduct';
+import AdminCategory from './components/AdminCategory';
 
 function App() {
   return (
@@ -31,24 +34,13 @@ function App() {
           </Route>
 
           <Route path='/admin' element={<AdminMaster />}>
-
+            <Route path='/admin/product' element={<AdminProduct />} />
+            <Route path='/admin/category' element={<AdminCategory />} />
           </Route>
         </Routes>
       </BrowserRouter>
 
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick={false}
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-        transition={Bounce}
-      />
+      <ToastContainer position="top-center" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick={false} rtl={false} pauseOnFocusLoss draggable pauseOnHover theme="light" transition={Bounce} />
     </>
   );
 }

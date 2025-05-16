@@ -14,8 +14,9 @@ function Login() {
     event.preventDefault();
     if (email === "admin@gmail.com" && password === "123") {
       toast.success("Login Successfully");
-      nav("/admin");
-    } else {
+      nav("/admin/product");
+    }
+    else {
       toast.error("Invalid user");
     }
   };
@@ -25,7 +26,6 @@ function Login() {
       <div className="container-fluid bg-dark text-white py-5 mb-4">
         <div className="container text-center">
           <h1 className="display-4">Login</h1>
-          {/* <p className="lead">Access your admin dashboard</p> */}
         </div>
       </div>
 
@@ -46,6 +46,7 @@ function Login() {
             <div className="d-grid">
               <button type="submit" className="btn btn-primary">Login</button>
             </div>
+
           </form>
         </div>
       </div>

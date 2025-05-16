@@ -1,34 +1,38 @@
 const { model } = require("mongoose")
 const Booking = require("./bookingModel")
-addbooking = (req, res) => {
-    var validationerror = []
-    if (!req.body.itemId)
-        validationerror.push("itemId is required")
-    if (!req.body.customerId)
-        validationerror.push("customerId is required")
-    if (!req.body.accountHolderName)
-        validationerror.push("accountHolderName is required")
-    if (!req.body.accountNumber)
-        validationerror.push("accountNumber is required")
-    if (!req.body.paymentMode)
-        validationerror.push("paymentMode is required")
-    if (!req.body.cvv)
-        validationerror.push("cvv is required")
 
+const addBooking = (req, res) => {
+    var validationerror = []
+    if (!req.body.itemId) {
+        validationerror.push("itemId is required")
+    }
+    if (!req.body.customerId) {
+        validationerror.push("customerId is required")
+    }
+    if (!req.body.accountHolderName) {
+        validationerror.push("accountHolderName is required")
+    }
+    if (!req.body.accountNumber) {
+        validationerror.push("accountNumber is required")
+    }
+    if (!req.body.paymentMode) {
+        validationerror.push("paymentMode is required")
+    }
+    if (!req.body.cvv) {
+        validationerror.push("cvv is required")
+    }
     if (validationerror.length > 0) {
         res.send({
             status: 420,
             success: false,
             message: "Validation error occur",
             error: validationerror,
-
         })
     }
-    else {
-        // insert
+    else { // insert
         Booking.findOne({ accountNumber: req.body.accountNumber })
-            .then(bookdata => {
-                if (!bookdata) {
+            .then(bookData => {
+                if (!bookData) {
                     // let total=Category.countDocuments()
                     let bookingObj = new Booking()
                     bookingObj.itemId = req.body.itemId
@@ -66,7 +70,6 @@ addbooking = (req, res) => {
                     })
                 }
             })
-
             .catch((err) => {
                 res.send({
                     status: 500,
@@ -78,16 +81,17 @@ addbooking = (req, res) => {
 
     }
 }
-getallBooking = (req, res) => {
+
+const getAllBooking = (req, res) => {
     Booking.find()
-    .populate("itemId")
-    .populate("customerId")
-        .then(bookdata => {
+        .populate("itemId")
+        .populate("customerId")
+        .then(bookData => {
             res.send({
                 status: 200,
                 success: true,
                 message: "Data loaded",
-                data: bookdata
+                data: bookData
             })
         })
         .catch(err => {
@@ -100,7 +104,4 @@ getallBooking = (req, res) => {
         })
 }
 
-module.exports = {
-    addbooking,
-    getallBooking
-}
+module.exports = { addBooking, getAllBooking }

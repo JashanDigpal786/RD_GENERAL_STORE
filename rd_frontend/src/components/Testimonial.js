@@ -5,10 +5,12 @@ function Testimonoal() {
     <>
       <div className="container-fluid testimonial py-5">
         <div className="container py-5">
+
           <div className="testimonial-header text-center">
             <h4 className="text-primary">Our Testimonial</h4>
             <h1 className="display-5 mb-5 text-dark">Our Client Saying!</h1>
           </div>
+
           <div className="owl-carousel testimonial-carousel">
             <div className="testimonial-item img-border-radius bg-light rounded p-4">
               <div className="position-relative">
@@ -25,7 +27,7 @@ function Testimonoal() {
                 <div className="d-flex align-items-center flex-nowrap">
                   <div className="bg-secondary rounded">
                     <img
-                      src="img/testimonial-1.jpg"
+                      src="assets/img/testimonial-1.jpg"
                       className="img-fluid rounded"
                       style={{ width: 100, height: 100 }}
                       alt=""
@@ -60,7 +62,7 @@ function Testimonoal() {
                 <div className="d-flex align-items-center flex-nowrap">
                   <div className="bg-secondary rounded">
                     <img
-                      src="img/testimonial-1.jpg"
+                      src="assets/img/testimonial-1.jpg"
                       className="img-fluid rounded"
                       style={{ width: 100, height: 100 }}
                       alt=""
@@ -95,7 +97,7 @@ function Testimonoal() {
                 <div className="d-flex align-items-center flex-nowrap">
                   <div className="bg-secondary rounded">
                     <img
-                      src="img/testimonial-1.jpg"
+                      src="assets/img/testimonial-1.jpg"
                       className="img-fluid rounded"
                       style={{ width: 100, height: 100 }}
                       alt=""
@@ -116,9 +118,9 @@ function Testimonoal() {
               </div>
             </div>
           </div>
+
         </div>
       </div>
-
     </>
   )
 }

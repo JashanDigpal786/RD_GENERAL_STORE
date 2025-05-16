@@ -1,11 +1,10 @@
-const Item=require("./itemModel")
+const Item = require("./itemModel")
 
-
-const additem = (req, res) => {
+const addItem = (req, res) => {
     var validationerror = []
     if (!req.body.subcategoryId)
         validationerror.push("subcategoryId is required")
-    if(!req.body.thumbnail)
+    if (!req.body.thumbnail)
         validationerror.push("thumbnail is required")
     if (!req.body.itemName)
         validationerror.push("itemName is required")
@@ -23,15 +22,14 @@ const additem = (req, res) => {
             status: 420
         })
     }
-    else {
-        // insert
+    else { // insert
         Item.findOne({ itemshippingCharge: req.body.itemshippingCharge })
             .then(subcategoryData => {
                 if (!subcategoryData) {
                     // let total=Category.countDocuments()
-                    let itemObj = new Item()               
+                    let itemObj = new Item()
                     itemObj.subcategoryId = req.body.subcategoryId
-                    itemObj.thumbnail ="itemimages/"+req.body.thumbnail
+                    itemObj.thumbnail = "itemimages/" + req.body.thumbnail
                     itemObj.itemPrice = req.body.itemPrice
                     itemObj.itemName = req.body.itemName
                     itemObj.itemDes = req.body.itemDes
@@ -54,18 +52,15 @@ const additem = (req, res) => {
                             })
                         })
                 }
-                else {
-                    // duplycacy
+                else { // duplicacy
                     res.send({
                         status: 400,
                         success: false,
                         message: "Record is already exist",
-                        data: categoryData
-
+                        data: subcategoryData
                     })
                 }
             })
-
             .catch((err) => {
                 res.send({
                     status: 500,
@@ -74,12 +69,12 @@ const additem = (req, res) => {
                     error: err.message
                 })
             })
-
     }
 }
-getallitem = (req, res) => {
+
+const getAllItem = (req, res) => {
     Item.find()
-    .populate('subcategoryId')
+        .populate('subcategoryId')
         .then(categoryData => {
             if (!categoryData) {
                 res.send({
@@ -106,7 +101,8 @@ getallitem = (req, res) => {
             })
         })
 }
-singleitem = (req, res) => {
+
+const singleItem = (req, res) => {
     var validationerror = []
     if (!req.body._id) {
         validationerror.push("_id is required")
@@ -140,7 +136,8 @@ singleitem = (req, res) => {
     }
 
 }
-// updateitem = (req, res) => {
+
+// const updateItem = (req, res) => {
 //     var validationerror = []
 //     if (!req.body._id)
 //         validationerror.push("_id is required")
@@ -162,13 +159,11 @@ singleitem = (req, res) => {
 //                         message: "Data not Found"
 //                     })
 //                 } else {
-
 //                     // update
 //                     if (req.body.categoryId)
 //                         categoryData.categoryId = req.body.categoryId
 //                     if (req.body.subcategoryName)
 //                         categoryData.subcategoryName = req.body.subcategoryName     
-                   
 //                     categoryData.save()
 //                         .then((categoryData) => {
 //                             res.send({
@@ -178,10 +173,7 @@ singleitem = (req, res) => {
 //                                 data: categoryData
 //                             })
 //                             // console.log(saveData);
-
-
 //                         })
-
 //                         .catch(err => {
 //                             res.send({
 //                                 status: 500,
@@ -202,7 +194,8 @@ singleitem = (req, res) => {
 //             })
 //     }
 // }
-deleteitem = (req, res) => {
+
+const deleteItem = (req, res) => {
     var validationerror = []
     if (!req.body._id)
         validationerror.push("_id is required")
@@ -215,7 +208,7 @@ deleteitem = (req, res) => {
         })
     }
     else {
-    Item.deleteOne({ _id: req.body._id })
+        Item.deleteOne({ _id: req.body._id })
             .then(categoryData => {
                 res.send({
                     status: 200,
@@ -235,7 +228,4 @@ deleteitem = (req, res) => {
     }
 }
 
-module.exports = {
-    additem, getallitem, singleitem, 
-    deleteitem
-}
+module.exports = { addItem, getAllItem, singleItem, deleteItem }

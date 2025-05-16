@@ -16,8 +16,7 @@ const addsubCategory = (req, res) => {
             status: 420
         })
     }
-    else {
-        // insert
+    else { // insert
         subCategory.findOne({ subcategoryName: req.body.subcategoryName })
             .then(subcategoryData => {
                 if (!subcategoryData) {
@@ -45,18 +44,15 @@ const addsubCategory = (req, res) => {
                             })
                         })
                 }
-                else {
-                    // duplycacy
+                else { // duplicacy
                     res.send({
                         status: 400,
                         success: false,
                         message: "Record is already exist",
-                        data: categoryData
-
+                        data: subcategoryData
                     })
                 }
             })
-
             .catch((err) => {
                 res.send({
                     status: 500,
@@ -65,12 +61,11 @@ const addsubCategory = (req, res) => {
                     error: err.message
                 })
             })
-
     }
 }
-getallsubCategory = (req, res) => {
+const getAllsubCategory = (req, res) => {
     subCategory.find()
-    .populate('categoryId')
+        .populate('categoryId')
         .then(categoryData => {
             if (!categoryData) {
                 res.send({
@@ -97,7 +92,8 @@ getallsubCategory = (req, res) => {
             })
         })
 }
-singlesubCategoryData = (req, res) => {
+
+const singlesubCategoryData = (req, res) => {
     var validationerror = []
     if (!req.body._id) {
         validationerror.push("_id is required")
@@ -129,9 +125,9 @@ singlesubCategoryData = (req, res) => {
                 })
             })
     }
-
 }
-updatesubCategory = (req, res) => {
+
+const updatesubCategory = (req, res) => {
     var validationerror = []
     if (!req.body._id)
         validationerror.push("_id is required")
@@ -152,14 +148,12 @@ updatesubCategory = (req, res) => {
                         success: false,
                         message: "Data not Found"
                     })
-                } else {
-
-                    // update
+                }
+                else { // update
                     if (req.body.categoryId)
                         categoryData.categoryId = req.body.categoryId
                     if (req.body.subcategoryName)
-                        categoryData.subcategoryName = req.body.subcategoryName     
-                   
+                        categoryData.subcategoryName = req.body.subcategoryName
                     categoryData.save()
                         .then((categoryData) => {
                             res.send({
@@ -169,10 +163,7 @@ updatesubCategory = (req, res) => {
                                 data: categoryData
                             })
                             // console.log(saveData);
-
-
                         })
-
                         .catch(err => {
                             res.send({
                                 status: 500,
@@ -193,7 +184,8 @@ updatesubCategory = (req, res) => {
             })
     }
 }
-deletesubCategory = (req, res) => {
+
+const deletesubCategory = (req, res) => {
     var validationerror = []
     if (!req.body._id)
         validationerror.push("_id is required")
@@ -226,7 +218,4 @@ deletesubCategory = (req, res) => {
     }
 }
 
-module.exports = {
-    addsubCategory, getallsubCategory, singlesubCategoryData, updatesubCategory,
-    deletesubCategory
-}
+module.exports = { addsubCategory, getAllsubCategory, singlesubCategoryData, updatesubCategory, deletesubCategory }

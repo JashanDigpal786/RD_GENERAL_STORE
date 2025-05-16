@@ -1,16 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Header() {
+function Navbar() {
   return (
     <>
       <div className="container-fluid fixed-top">
         <div className="container px-0">
           {/* <nav className="navbar navbar-light bg-white navbar-expand-xl"> */}
           <nav className="navbar navbar-light bg-white navbar-expand-xl  navbar-expand-lg fixed-top">
-            <Link to="/" className="navbar-brand">
-              <h1 className="text-primary display-6">RD Store</h1>
-            </Link>
+            <Link to="/" className="navbar-brand"><h1 className="text-primary display-6">RD Store</h1></Link>
             <button className="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"            >
               <span className="fa fa-bars text-primary" />
             </button>
@@ -46,11 +44,9 @@ function Header() {
             </div>
           </nav>
         </div>
-
-
       </div>
     </>
   )
 }
 
-export default Header
+export default Navbar

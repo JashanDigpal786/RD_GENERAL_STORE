@@ -5,9 +5,12 @@ function Shop() {
         <>
             <div className="container-fluid fruite py-5">
                 <div className="container py-5">
+                    
                     <h1 className="mb-4">Fresh fruits shop</h1>
+
                     <div className="row g-4">
                         <div className="col-lg-12">
+
                             <div className="row g-4">
                                 <div className="col-xl-3">
                                     <div className="input-group w-100 mx-auto d-flex">
@@ -40,6 +43,7 @@ function Shop() {
                                     </div>
                                 </div>
                             </div>
+
                             <div className="row g-4">
                                 <div className="col-lg-3">
                                     <div className="row g-4">
@@ -272,7 +276,7 @@ function Shop() {
                                         <div className="col-lg-12">
                                             <div className="position-relative">
                                                 <img
-                                                    src="img/banner-fruits.jpg"
+                                                    src="assets/img/banner-fruits.jpg"
                                                     className="img-fluid w-100 rounded"
                                                     alt=""
                                                 />
@@ -298,7 +302,7 @@ function Shop() {
                                             <div className="rounded position-relative fruite-item">
                                                 <div className="fruite-img">
                                                     <img
-                                                        src="img/fruite-item-5.jpg"
+                                                        src="assets/img/fruite-item-5.jpg"
                                                         className="img-fluid w-100 rounded-top"
                                                         alt=""
                                                     />
@@ -332,7 +336,7 @@ function Shop() {
                                             <div className="rounded position-relative fruite-item">
                                                 <div className="fruite-img">
                                                     <img
-                                                        src="img/fruite-item-5.jpg"
+                                                        src="assets/img/fruite-item-5.jpg"
                                                         className="img-fluid w-100 rounded-top"
                                                         alt=""
                                                     />
@@ -366,7 +370,7 @@ function Shop() {
                                             <div className="rounded position-relative fruite-item">
                                                 <div className="fruite-img">
                                                     <img
-                                                        src="img/fruite-item-2.jpg"
+                                                        src="assets/img/fruite-item-2.jpg"
                                                         className="img-fluid w-100 rounded-top"
                                                         alt=""
                                                     />
@@ -400,7 +404,7 @@ function Shop() {
                                             <div className="rounded position-relative fruite-item">
                                                 <div className="fruite-img">
                                                     <img
-                                                        src="img/fruite-item-4.jpg"
+                                                        src="assets/img/fruite-item-4.jpg"
                                                         className="img-fluid w-100 rounded-top"
                                                         alt=""
                                                     />
@@ -434,7 +438,7 @@ function Shop() {
                                             <div className="rounded position-relative fruite-item">
                                                 <div className="fruite-img">
                                                     <img
-                                                        src="img/fruite-item-3.jpg"
+                                                        src="assets/img/fruite-item-3.jpg"
                                                         className="img-fluid w-100 rounded-top"
                                                         alt=""
                                                     />
@@ -468,7 +472,7 @@ function Shop() {
                                             <div className="rounded position-relative fruite-item">
                                                 <div className="fruite-img">
                                                     <img
-                                                        src="img/fruite-item-1.jpg"
+                                                        src="assets/img/fruite-item-1.jpg"
                                                         className="img-fluid w-100 rounded-top"
                                                         alt=""
                                                     />
@@ -502,7 +506,7 @@ function Shop() {
                                             <div className="rounded position-relative fruite-item">
                                                 <div className="fruite-img">
                                                     <img
-                                                        src="img/fruite-item-2.jpg"
+                                                        src="assets/img/fruite-item-2.jpg"
                                                         className="img-fluid w-100 rounded-top"
                                                         alt=""
                                                     />
@@ -536,7 +540,7 @@ function Shop() {
                                             <div className="rounded position-relative fruite-item">
                                                 <div className="fruite-img">
                                                     <img
-                                                        src="img/fruite-item-5.jpg"
+                                                        src="assets/img/fruite-item-5.jpg"
                                                         className="img-fluid w-100 rounded-top"
                                                         alt=""
                                                     />
@@ -570,7 +574,7 @@ function Shop() {
                                             <div className="rounded position-relative fruite-item">
                                                 <div className="fruite-img">
                                                     <img
-                                                        src="img/fruite-item-1.jpg"
+                                                        src="assets/img/fruite-item-1.jpg"
                                                         className="img-fluid w-100 rounded-top"
                                                         alt=""
                                                     />
@@ -631,12 +635,12 @@ function Shop() {
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
+
                 </div>
             </div>
-
-
         </>
     )
 }
