@@ -14,7 +14,7 @@ function Login() {
     event.preventDefault();
     if (email === "admin@gmail.com" && password === "123") {
       toast.success("Login Successfully");
-      nav("/admin/product");
+      nav("/admin/category");
     }
     else {
       toast.error("Invalid user");

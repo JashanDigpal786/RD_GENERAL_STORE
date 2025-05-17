@@ -4,10 +4,9 @@ const addsubCategory = (req, res) => {
     var validationerror = []
     if (!req.body.categoryId)
         validationerror.push("categoryId is required")
-    // if(req.body.categoryImage)
-    //     validationerror.push("categoryImage is required")
     if (!req.body.subcategoryName)
         validationerror.push("subcategoryName is required")
+
     if (validationerror.length > 0) {
         res.send({
             status: false,
@@ -15,17 +14,14 @@ const addsubCategory = (req, res) => {
             error: validationerror,
             status: 420
         })
-    }
-    else { // insert
+    } else {
         subCategory.findOne({ subcategoryName: req.body.subcategoryName })
             .then(subcategoryData => {
                 if (!subcategoryData) {
-                    // let total=Category.countDocuments()
-                    let subcategoryObj = new subCategory()
-                    // subcategoryObj.autoId = total + 1
+                    var subcategoryObj = new subCategory()
                     subcategoryObj.categoryId = req.body.categoryId
-                    // subcategoryObj.categoryImage=req.body.categoryImage
                     subcategoryObj.subcategoryName = req.body.subcategoryName
+
                     subcategoryObj.save()
                         .then((saveData) => {
                             res.send({
@@ -43,8 +39,7 @@ const addsubCategory = (req, res) => {
                                 error: err.message
                             })
                         })
-                }
-                else { // duplicacy
+                } else {
                     res.send({
                         status: 400,
                         success: false,
@@ -63,20 +58,21 @@ const addsubCategory = (req, res) => {
             })
     }
 }
+
 const getAllsubCategory = (req, res) => {
     subCategory.find()
         .populate('categoryId')
         .then(categoryData => {
-            if (!categoryData) {
+            if (!categoryData || categoryData.length === 0) {
                 res.send({
                     status: 404,
                     success: false,
                     message: "Data Not Found",
-                    data: categoryData,
+                    data: []
                 })
             } else {
                 res.send({
-                    staus: 200,
+                    status: 200,
                     success: true,
                     message: "Data Loaded",
                     data: categoryData
@@ -105,16 +101,25 @@ const singlesubCategoryData = (req, res) => {
             message: "Validation error",
             error: validationerror
         })
-    }
-    else {
+    } else {
         subCategory.findOne({ _id: req.body._id })
-            .then((categoryData) => {
-                res.send({
-                    status: 200,
-                    success: true,
-                    message: "Single Categody found",
-                    data: categoryData
-                })
+            .populate('categoryId')
+            .then((subcategoryData) => {
+                if (!subcategoryData) {
+                    res.send({
+                        status: 404,
+                        success: false,
+                        message: "Subcategory not found",
+                        data: null
+                    })
+                } else {
+                    res.send({
+                        status: 200,
+                        success: true,
+                        message: "Single Subcategory found",
+                        data: subcategoryData
+                    })
+                }
             })
             .catch((err) => {
                 res.send({
@@ -138,31 +143,29 @@ const updatesubCategory = (req, res) => {
             message: "Validation error",
             error: validationerror
         })
-    }
-    else {
+    } else {
         subCategory.findOne({ _id: req.body._id })
-            .then(categoryData => {
-                if (!categoryData) {
+            .then(subcategoryData => {
+                if (!subcategoryData) {
                     res.send({
                         status: 404,
                         success: false,
                         message: "Data not Found"
                     })
-                }
-                else { // update
+                } else {
                     if (req.body.categoryId)
-                        categoryData.categoryId = req.body.categoryId
+                        subcategoryData.categoryId = req.body.categoryId
                     if (req.body.subcategoryName)
-                        categoryData.subcategoryName = req.body.subcategoryName
-                    categoryData.save()
-                        .then((categoryData) => {
+                        subcategoryData.subcategoryName = req.body.subcategoryName
+
+                    subcategoryData.save()
+                        .then((updatedData) => {
                             res.send({
                                 status: 200,
                                 success: true,
-                                message: "Record is update !!",
-                                data: categoryData
+                                message: "Record is updated !!",
+                                data: updatedData
                             })
-                            // console.log(saveData);
                         })
                         .catch(err => {
                             res.send({
@@ -196,16 +199,23 @@ const deletesubCategory = (req, res) => {
             message: "Validation error occur",
             error: validationerror
         })
-    }
-    else {
+    } else {
         subCategory.deleteOne({ _id: req.body._id })
-            .then(categoryData => {
-                res.send({
-                    status: 200,
-                    success: true,
-                    message: "Deleted Successfully !!",
-                    data: categoryData
-                })
+            .then(deleteData => {
+                if (deleteData.deletedCount === 0) {
+                    res.send({
+                        status: 404,
+                        success: false,
+                        message: "Subcategory not found or already deleted"
+                    })
+                } else {
+                    res.send({
+                        status: 200,
+                        success: true,
+                        message: "Deleted Successfully !!",
+                        data: deleteData
+                    })
+                }
             })
             .catch((err) => {
                 res.send({
@@ -218,4 +228,10 @@ const deletesubCategory = (req, res) => {
     }
 }
 
-module.exports = { addsubCategory, getAllsubCategory, singlesubCategoryData, updatesubCategory, deletesubCategory }
+module.exports = {
+    addsubCategory,
+    getAllsubCategory,
+    singlesubCategoryData,
+    updatesubCategory,
+    deletesubCategory
+}

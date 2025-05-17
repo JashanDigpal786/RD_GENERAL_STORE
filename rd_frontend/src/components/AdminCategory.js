@@ -64,7 +64,7 @@ function AdminCategory() {
                 </div> */}
             </div>
             <div className="container">
-                <h1 className="text-center">ADD Category</h1>
+                <h1 className="text-center">ADD CATEGORY</h1>
                 <form onSubmit={handleForm}>
                     <div className="row py-2">
                         <div className="col-2">Category Name</div>
@@ -78,8 +78,7 @@ function AdminCategory() {
                            <div className="col-2">Description</div>
                         <div className="col-10"><input type="text" value={description}
                          onChange={changeDes} className="form-control" /></div>
-
-                        <div className="col-12"><button type="submit" value="submit" className="btn btn-success">Submit</button>  </div>
+                        <div className="col-12 pt-4 text-center"><button type="submit" value="submit" className="btn btn-success">Submit</button>  </div>
                     </div>
                 </form>
             </div>

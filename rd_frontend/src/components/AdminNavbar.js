@@ -13,8 +13,9 @@ function AdminHeader() {
             </button>
             <div className="collapse navbar-collapse bg-white" id="navbarCollapse">
               <div className="navbar-nav mx-auto">
-                <Link to="/admin/product" className="nav-item nav-link active"> Product </Link>
                 <Link to="/admin/category" className="nav-item nav-link"> Category </Link>
+                <Link to="/admin/subcategory" className="nav-item nav-link"> SubCategory </Link>
+                <Link to="/admin/product" className="nav-item nav-link active"> Product </Link>
                 <Link to="/login" className="nav-item nav-link"> Logout </Link>
               </div> 
             </div>

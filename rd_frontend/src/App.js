@@ -15,6 +15,7 @@ import Contact from './components/Contact';
 import AdminMaster from './components/AdminMaster';
 import AdminProduct from './components/AdminProduct';
 import AdminCategory from './components/AdminCategory';
+import AdminSubCategory from './components/AdminSub';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path='/admin' element={<AdminMaster />}>
             <Route path='/admin/product' element={<AdminProduct />} />
             <Route path='/admin/category' element={<AdminCategory />} />
+            <Route path='/admin/subcategory' element={<AdminSubCategory />} />
           </Route>
         </Routes>
       </BrowserRouter>
