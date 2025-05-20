@@ -23,11 +23,12 @@ const itemStorage = multer.diskStorage({
 
 const itemupload = multer({ storage: itemStorage })
 
+// router.post('/register',userController.add)
+
 router.post('/customer/add', customerController.register)
 router.post('/customer/getall', customerController.getAllCustomer)
 router.post('/customer/login', customerController.login)
 
-// router.post('/register',userController.add)
 router.post('/category/add', categoryController.addCategory)
 router.post('/category/getall', categoryController.getAllCategory)
 router.post('/category/getsingle', categoryController.singleCategoryData)

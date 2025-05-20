@@ -1,3 +1,11 @@
+:root {
+--bs-primary: #ff6f00;
+--bs-secondary: #fdd835;
+--bs-light: #fffde7;
+--bs-dark: #3e2723;
+--bs-white: #ffffff;
+
+}
 
 /*** Spinner Start ***/
 #spinner {

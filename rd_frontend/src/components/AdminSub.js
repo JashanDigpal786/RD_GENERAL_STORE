@@ -10,8 +10,7 @@ function AdminSub() {
     const nav = useNavigate()
 
     useEffect(() => {
-        // Load categories to select parent category
-        axios.get("http://localhost:4000/api/subcategory/all")
+        axios.get("http://localhost:4000/api/subcategory/getall")
             .then(res => {
                 if (res.data.success) {
                     setCategories(res.data.data)
