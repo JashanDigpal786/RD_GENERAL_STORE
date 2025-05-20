@@ -25,28 +25,32 @@ const itemupload = multer({ storage: itemStorage })
 
 // router.post('/register',userController.add)
 
+// CUSTOMER APIS
 router.post('/customer/add', customerController.register)
 router.post('/customer/getall', customerController.getAllCustomer)
 router.post('/customer/login', customerController.login)
 
+// CATEGORY APIS
 router.post('/category/add', categoryController.addCategory)
 router.post('/category/getall', categoryController.getAllCategory)
 router.post('/category/getsingle', categoryController.singleCategoryData)
 router.post('/category/update', categoryController.updateCategory)
 router.post('/category/delete', categoryController.deleteCategory)
 
+// SUB CATEGORY APIS
 router.post('/subcategory/add', subcategoryController.addsubCategory)
 router.post('/subcategory/getall', subcategoryController.getAllsubCategory)
 router.post('/subcategory/getsingle', subcategoryController.singlesubCategoryData)
 router.post('/subcategory/update', subcategoryController.updatesubCategory)
 router.post('/subcategory/delete', subcategoryController.deletesubCategory)
 
-
+// PRODUCT APIS
 router.post('/item/add', itemupload.single('thumbnail'), itemController.addItem)
 router.post('/item/getall', itemController.getAllItem)
 router.post('/item/getsingle', itemController.singleItem)
 router.post('/item/delete', itemController.deleteItem)
 
+// BOOKING APIS
 router.post('/book/add', bookingController.addBooking)
 router.post('/book/getall', bookingController.getAllBooking)
 
