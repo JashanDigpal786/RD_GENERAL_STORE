@@ -43,32 +43,33 @@ function AdminCategory() {
     }
     return (
         <>
-            <div className="container-fluid py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-                {/* <div className="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s"> */}
-                {/* <div className="container text-center py-5">
-                    <h1 className="display-3 text-white text-uppercase mb-3 animated slideInDown">Category</h1>
-                    <nav aria-label="breadcrumb animated slideInDown">
-                        <ol className="breadcrumb justify-content-center text-uppercase mb-0">
-                            <li className="breadcrumb-item"><a className="text-white" href="#">Home</a></li>
-                            <li className="breadcrumb-item"><a className="text-white" href="#">Pages</a></li>
-                            <li className="breadcrumb-item text-primary active" aria-current="page">Login</li>
-                        </ol>
-                    </nav>
-                </div> */}
-            </div>
-            <div className="container">
-                <h1 className="text-center">ADD CATEGORY</h1>
-                <form onSubmit={handleForm}>
-                    <div className="row py-2">
-                        <div className="col-2">Category Name</div>
-                        <div className="col-10"><input type="text" value={categoryName} onChange={changeCategory} className="form-control" /></div>
-                        <div className="col-2"></div>
-                        <div className="col-10 py-3"></div>
-                        <div className="col-2">Description</div>
-                        <div className="col-10"><input type="text" value={description} onChange={changeDes} className="form-control" /></div>
-                        <div className="col-12 pt-4 text-center"><button type="submit" value="submit" className="btn btn-success">Submit</button>  </div>
+            <div className="container-fluid py-1 mb-5 wow fadeIn" data-wow-delay="0.1s">
+                <div className="container-fluid page-header py-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
+                    <div className="container text-center py-5">
+                        <h1 className="display-3 text-white text-uppercase mb-3 animated slideInDown">Category</h1>
+                        <nav aria-label="breadcrumb animated slideInDown">
+                            <ol className="breadcrumb justify-content-center text-uppercase mb-0">
+                                <li className="breadcrumb-item"><a className="text-white" href="#">Home</a></li>
+                                <li className="breadcrumb-item"><a className="text-white" href="#">Pages</a></li>
+                                <li className="breadcrumb-item text-primary active" aria-current="page">Category</li>
+                            </ol>
+                        </nav>
                     </div>
-                </form>
+                </div>
+                <div className="container">
+                    <h1 className="text-center">ADD CATEGORY</h1>
+                    <form onSubmit={handleForm}>
+                        <div className="row py-2">
+                            <div className="col-2">Category Name</div>
+                            <div className="col-10"><input type="text" value={categoryName} onChange={changeCategory} className="form-control" /></div>
+                            <div className="col-2"></div>
+                            <div className="col-10 py-3"></div>
+                            <div className="col-2">Description</div>
+                            <div className="col-10"><input type="text" value={description} onChange={changeDes} className="form-control" /></div>
+                            <div className="col-12 pt-4 text-center"><button type="submit" value="submit" className="btn btn-success">Submit</button>  </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </>
     )

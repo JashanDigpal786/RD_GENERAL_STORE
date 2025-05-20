@@ -13,11 +13,27 @@ function AdminHeader() {
             </button>
             <div className="collapse navbar-collapse bg-white" id="navbarCollapse">
               <div className="navbar-nav mx-auto">
-                <Link to="/admin/category" className="nav-item nav-link"> Category </Link>
-                <Link to="/admin/subcategory" className="nav-item nav-link"> SubCategory </Link>
+
+
+
+                <div className="nav-item dropdown">
+                  <span className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Category </span>
+                  <div className="dropdown-menu rounded-0 border-0 shadow-sm animate__animated animate__fadeIn">
+                    <Link to="/admin/category" className="dropdown-item">Add</Link>
+                    <Link to="/admin/viewcategory" className="dropdown-item">View</Link>
+                  </div>
+                </div>
+
+                <div className="nav-item dropdown">
+                  <span className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"> SubCategory </span>
+                  <div className="dropdown-menu rounded-0 border-0 shadow-sm animate__animated animate__fadeIn">
+                    <Link to="/admin/subcategory" className="dropdown-item">Add</Link>
+                    <Link to="/admin/viewsubcategory" className="dropdown-item">View</Link>
+                  </div>
+                </div>
                 <Link to="/admin/product" className="nav-item nav-link active"> Product </Link>
                 <Link to="/login" className="nav-item nav-link"> Logout </Link>
-              </div> 
+              </div>
             </div>
           </nav>
         </div>
