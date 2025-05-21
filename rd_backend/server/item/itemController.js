@@ -137,63 +137,68 @@ const singleItem = (req, res) => {
 
 }
 
-// const updateItem = (req, res) => {
-//     var validationerror = []
-//     if (!req.body._id)
-//         validationerror.push("_id is required")
-//     if (validationerror.length) {
-//         res.send({
-//             status: 420,
-//             success: false,
-//             message: "Validation error",
-//             error: validationerror
-//         })
-//     }
-//     else {
-//         subCategory.findOne({ _id: req.body._id })
-//             .then(categoryData => {
-//                 if (!categoryData) {
-//                     res.send({
-//                         status: 404,
-//                         success: false,
-//                         message: "Data not Found"
-//                     })
-//                 } else {
-//                     // update
-//                     if (req.body.categoryId)
-//                         categoryData.categoryId = req.body.categoryId
-//                     if (req.body.subcategoryName)
-//                         categoryData.subcategoryName = req.body.subcategoryName     
-//                     categoryData.save()
-//                         .then((categoryData) => {
-//                             res.send({
-//                                 status: 200,
-//                                 success: true,
-//                                 message: "Record is update !!",
-//                                 data: categoryData
-//                             })
-//                             // console.log(saveData);
-//                         })
-//                         .catch(err => {
-//                             res.send({
-//                                 status: 500,
-//                                 success: false,
-//                                 message: "Internal Server error",
-//                                 error: err.message
-//                             })
-//                         })
-//                 }
-//             })
-//             .catch(err => {
-//                 res.send({
-//                     status: 500,
-//                     success: false,
-//                     message: "Internal server error",
-//                     error: err.message
-//                 })
-//             })
-//     }
-// }
+const updateItem = (req, res) => {
+    var validationerror = []
+    if (!req.body._id)
+        validationerror.push("_id is required")
+    if (validationerror.length) {
+        res.send({
+            status: 420,
+            success: false,
+            message: "Validation error",
+            error: validationerror
+        })
+    }
+    else {
+        Item.findOne({ _id: req.body._id })
+            .then(categoryData => {
+                if (!categoryData) {
+                    res.send({
+                        status: 404,
+                        success: false,
+                        message: "Data not Found"
+                    })
+                } else {
+                    // update
+                    if (req.body.itemName)
+                        categoryData.itemName = req.body.itemName
+                    if (req.body.itemDes)
+                        categoryData.itemDes = req.body.itemDes     
+                    if (req.body.itemPrice)
+                        categoryData.itemPrice = req.body.itemPrice    
+                    if (req.body.itemshippingCharge)
+                        categoryData.itemshippingCharge = req.body.itemshippingCharge    
+                    
+                    categoryData.save()
+                        .then((categoryData) => {
+                            res.send({
+                                status: 200,
+                                success: true,
+                                message: "Record is update !!",
+                                data: categoryData
+                            })
+                            // console.log(saveData);
+                        })
+                        .catch(err => {
+                            res.send({
+                                status: 500,
+                                success: false,
+                                message: "Internal Server error",
+                                error: err.message
+                            })
+                        })
+                }
+            })
+            .catch(err => {
+                res.send({
+                    status: 500,
+                    success: false,
+                    message: "Internal server error",
+                    error: err.message
+                })
+            })
+    }
+}
 
 const deleteItem = (req, res) => {
     var validationerror = []

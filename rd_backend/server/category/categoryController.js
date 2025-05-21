@@ -5,9 +5,9 @@ const addCategory = (req, res) => {
     if (!req.body.categoryName) {
         validationerror.push("categoryName is required")
     }
-    // if (req.body.categoryImage) {
-    //     validationerror.push("categoryImage is required")
-    // }
+    if (!req.body.thumbnail) {
+        validationerror.push("thumbnail is required")
+    }
     if (!req.body.description) {
         validationerror.push("description is required")
     }
@@ -28,10 +28,10 @@ const addCategory = (req, res) => {
                     let categoryObj = new Category()
                     // categoryObj.autoId = total + 1
                     categoryObj.categoryName = req.body.categoryName
-                    // categoryObj.categoryImage=req.body.categoryImage
+                    categoryObj.thumbnail="categoryimages/"+req.body.thumbnail
                     categoryObj.description = req.body.description
                     categoryObj.save()
-                        .then((saveData) => {
+                        .then(saveData => {
                             res.send({
                                 status: 200,
                                 success: true,
@@ -39,7 +39,7 @@ const addCategory = (req, res) => {
                                 data: saveData
                             })
                         })
-                        .catch((err) => {
+                        .catch(err => {
                             res.send({
                                 status: 500,
                                 success: false,
@@ -148,6 +148,9 @@ const updateCategory = (req, res) => {
                 else { // update
                     if (req.body.categoryName) {
                         categoryData.categoryName = req.body.categoryName
+                    }
+                       if (req.body.thumbnail) {
+                        categoryData.thumbnail ="categoryimages/"+req.body.thumbnail
                     }
                     if (req.body.description) {
                         categoryData.description = req.body.description

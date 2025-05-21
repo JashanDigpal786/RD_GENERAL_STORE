@@ -10,6 +10,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(__dirname + "/public"))
 
+const seeder=require("./config/seeder")
+seeder.adminRegister()
 const routes = require("./routes/apiRoutes")
 app.use("/api", routes)
 

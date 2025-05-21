@@ -1,28 +1,31 @@
 {
-  "dependencies": {
-    "concurrently": "^9.1.2",
-    "init": "^0.1.2",
-    "nodemon": "^3.1.10"
-  },
   "name": "rd_store",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "license": "ISC",
+  "description": "",
+  "author": "",
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JashanDigpal786/project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JashanDigpal786/project/issues"
+  },
+  "homepage": "https://github.com/JashanDigpal786/project#readme",
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "frontend": "cd rd_frontend && npm start",
     "backend": "cd rd_backend && npm start",
     "start": "concurrently \"npm run frontend\" \"npm run backend\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JashanDigpal786/project.git"
+  
+  "dependencies": {
+    "concurrently": "^9.1.2",
+    "init": "^0.1.2",
+    "nodemon": "^3.1.10"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JashanDigpal786/project/issues"
-  },
-  "homepage": "https://github.com/JashanDigpal786/project#readme",
-  "description": ""
+  "devDependencies": {}
 }

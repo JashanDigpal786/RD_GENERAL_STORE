@@ -4,6 +4,9 @@ const addsubCategory = (req, res) => {
     var validationerror = []
     if (!req.body.categoryId)
         validationerror.push("categoryId is required")
+    if (!req.body.thumbnail) {
+        validationerror.push("thumbnail is required")
+    }
     if (!req.body.subcategoryName)
         validationerror.push("subcategoryName is required")
 
@@ -21,9 +24,9 @@ const addsubCategory = (req, res) => {
                     var subcategoryObj = new subCategory()
                     subcategoryObj.categoryId = req.body.categoryId
                     subcategoryObj.subcategoryName = req.body.subcategoryName
-
+                    subcategoryObj.thumbnail = "subcategoryimages/" + req.body.thumbnail
                     subcategoryObj.save()
-                        .then((saveData) => {
+                        .then(saveData => {
                             res.send({
                                 status: 200,
                                 success: true,
@@ -31,7 +34,7 @@ const addsubCategory = (req, res) => {
                                 data: saveData
                             })
                         })
-                        .catch((err) => {
+                        .catch(err => {
                             res.send({
                                 status: 500,
                                 success: false,
@@ -44,11 +47,11 @@ const addsubCategory = (req, res) => {
                         status: 400,
                         success: false,
                         message: "Record is already exist",
-                        data: subcategoryData
+
                     })
                 }
             })
-            .catch((err) => {
+            .catch(err => {
                 res.send({
                     status: 500,
                     success: false,
@@ -136,6 +139,7 @@ const updatesubCategory = (req, res) => {
     var validationerror = []
     if (!req.body._id)
         validationerror.push("_id is required")
+    
     if (validationerror.length) {
         res.send({
             status: 420,
@@ -155,6 +159,9 @@ const updatesubCategory = (req, res) => {
                 } else {
                     if (req.body.categoryId)
                         subcategoryData.categoryId = req.body.categoryId
+                      if (req.body.thumbnail) {
+                        subcategoryData.thumbnail ="subcategoryimages/"+req.body.thumbnail
+                    }
                     if (req.body.subcategoryName)
                         subcategoryData.subcategoryName = req.body.subcategoryName
 

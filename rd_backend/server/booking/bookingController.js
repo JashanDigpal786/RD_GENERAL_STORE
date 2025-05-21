@@ -3,12 +3,10 @@ const Booking = require("./bookingModel")
 
 const addBooking = (req, res) => {
     var validationerror = []
-    if (!req.body.itemId) {
-        validationerror.push("itemId is required")
+    if (!req.body.itemPrice) {
+        validationerror.push("itemPrice is required")
     }
-    if (!req.body.customerId) {
-        validationerror.push("customerId is required")
-    }
+   
     if (!req.body.accountHolderName) {
         validationerror.push("accountHolderName is required")
     }
@@ -35,14 +33,13 @@ const addBooking = (req, res) => {
                 if (!bookData) {
                     // let total=Category.countDocuments()
                     let bookingObj = new Booking()
-                    bookingObj.itemId = req.body.itemId
-                    bookingObj.customerId = req.body.customerId
+                    bookingObj.itemPrice = req.body.itemPrice
                     bookingObj.accountHolderName = req.body.accountHolderName
                     bookingObj.paymentMode = req.body.paymentMode
                     bookingObj.accountNumber = req.body.accountNumber
                     bookingObj.cvv = req.body.cvv
                     bookingObj.save()
-                        .then((saveData) => {
+                        .then(saveData => {
                             res.send({
                                 status: 200,
                                 success: true,
@@ -50,7 +47,7 @@ const addBooking = (req, res) => {
                                 data: saveData
                             })
                         })
-                        .catch((err) => {
+                        .catch(err=> {
                             res.send({
                                 status: 500,
                                 success: false,
@@ -84,8 +81,7 @@ const addBooking = (req, res) => {
 
 const getAllBooking = (req, res) => {
     Booking.find()
-        .populate("itemId")
-        .populate("customerId")
+
         .then(bookData => {
             res.send({
                 status: 200,
@@ -103,5 +99,55 @@ const getAllBooking = (req, res) => {
             })
         })
 }
+changeStatus=(req,res)=>{
+    var validationerror=[]
+    if(!req.body._id)
+        validationerror.push("id is required")
+    if(!req.body.status)
+        validationerror.push("status is required")
+    if(validationerror.length>0){
+        res.send({
+            success:false,
+            status:420,
+            message:"Validation error",
+            error:validationerror,
+        })
+    }
+    else{
+            Booking.findOne({_id:req.body._id})
+            .then(bookData=>{
+                if(!bookData){
+                    res.send({
+                        success:false,
+                        status:404,
+                        message:"Data not found",
+                        data:bookData
+                    })
+                }
+                else{
+                    if(req.body.status)
+                    bookData.status=req.body.status
+                    bookData.save()
+                    .then(bookData=>{
+                        res.send({
+                            success:true,
+                            status:200,
+                            message:"updated status",
+                            data:bookData
+                        })
+                    })
+                    .catch(err=>{
+                        res.send({
+                            success:false,
+                            status:500,
+                            message:"Internal server error",
+                            error:err.message
+                        })
+                    })
+                }
 
-module.exports = { addBooking, getAllBooking }
+            })
+    }
+}
+
+module.exports = { addBooking, getAllBooking,changeStatus }
