@@ -6,7 +6,6 @@ function Header() {
     <>
       <div className="container-fluid fixed-top">
         <div className="container px-0">
-          {/* <nav className="navbar navbar-light bg-white navbar-expand-xl"> */}
           <nav className="navbar navbar-light bg-white navbar-expand-xl navbar-expand-lg fixed-top">
             <Link to="/" className="navbar-brand">
               <h1 className="text-primary display-6">RD Store</h1>
