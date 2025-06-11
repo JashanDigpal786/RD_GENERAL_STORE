@@ -1,15 +1,14 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
-
 import UserNavbar from './UserNavbar'
-import UserFooter from './UserFooter'
+import { Outlet } from 'react-router-dom'
+import Footer from '../layout/Footer'
 
 function UserMaster() {
   return (
     <>
-      <UserNavbar/>
-      <Outlet/>
-      <UserFooter/>
+      <UserNavbar />
+      <Outlet />
+      <Footer />
     </>
   )
 }

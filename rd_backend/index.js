@@ -3,6 +3,10 @@ const app = express();
 const PORT = 4000;
 
 const db = require("./config/db")
+
+const seeder = require("./config/seeder")
+seeder.adminRegister()
+
 const cors = require("cors")
 app.use(cors())
 
@@ -10,8 +14,6 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(__dirname + "/public"))
 
-const seeder=require("./config/seeder")
-seeder.adminRegister()
 const routes = require("./routes/apiRoutes")
 app.use("/api", routes)
 

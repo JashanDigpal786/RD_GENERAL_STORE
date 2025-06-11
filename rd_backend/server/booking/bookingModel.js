@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 
 const bookingSchema = mongoose.Schema({
-    itemPrice: { type:String, default: null },
+    itemPrice: { type: String, default: null },
     // customerId: { type: mongoose.Schema.Types.ObjectId, ref: "customer", default: null },
     accountHolderName: { type: String, default: null },
     accountNumber: { type: String, default: null },

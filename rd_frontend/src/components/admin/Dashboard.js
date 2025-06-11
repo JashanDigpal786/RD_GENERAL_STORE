@@ -1,90 +1,143 @@
-
-import axios from "axios"
-import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
-
-
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Dashboard() {
-    const [data, setData] = useState([])
-    useEffect(() => {
+  const [data, setData] = useState([]);
 
-        axios.post("http://localhost:4000/api/dashboard")
-            .then((res) => {
-                console.log(res)
-                setData(res.data)
-            })
-            .catch((err) => {
-                console.log(err)
-            })
-    }, [])
-    return (
-        <>
+  useEffect(() => {
+    axios
+      .post("http://localhost:4000/api/dashboard")
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
-            <section
-                className="breadcrumb-section set-bg"
-                // data-setbg="/assets/img/breadcrumb-bg.jpg"
-                style={{ backgroundImage: "url(/assets/img/breadcrumb-bg.jpg)" }}
-            >
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12 text-center">
-                            <div className="breadcrumb-text">
-                                <h2>Admin Dashboard</h2>
-                                <div className="bt-option">
-                                    <a href="./index.html">Home</a>
-                                    {/* <a href="#">Pages</a> */}
-                                    <span>Dashboard</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  return (
+    <>
+      {/* Breadcrumb Section */}
+      <section
+        className="breadcrumb-section set-bg"
+        style={{
+          backgroundImage: "url(/assets/img/breadcrumb-bg.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          // paddingTop: "100px",
+        }}
+      >
+        <div className="container mb-5 ">
+          <div className="row mb-5 ">
+            {/* <div className="col-lg-12 my-5 text-center">
+              <div className="breadcrumb-text">
+                <h2 style={{ color: "#fff" }}>Admin Dashboard</h2>
+                <div className="bt-option">
+                  <Link to="/" style={{ color: "#f8d7da", fontWeight: "500" }}>
+                    Home
+                  </Link>
+                  <span style={{ color: "#fff", marginLeft: "8px" }}>
+                    / Dashboard
+                  </span>
                 </div>
-            </section>
-            <div className="container-fluid" style={{ overflow: "hidden" }}>
-                <div className="container">
-                    <div className="row py-2">
-                        <div className="col-md-12 fw-bold text-center py-3"><h1 id="welcome">Welcome Admin</h1></div>
-                        <div className="col-md-1"></div>
+              </div>
+            </div> */}
+          </div>
+        </div>
+      </section>
 
-                        <div className="col-md-4 text-center py-5 shadow">
-                            <Link to={"/admin/viewcategory"} style={{ textDecoration: "none", }}><br /><h1>Total Service {data.totalservice}
-                            </h1></Link>
-
-                        </div>
-                        <div className="col-md-2"></div>
-                        <div className="col-md-4 shadow text-center py-5">
-                            <Link to={"/admin/viewsubcategory"} style={{ textDecoration: "none" }}><br /><h1>Total Subservice {data.totalsubservice}</h1></Link>
-                        </div>
-
-                        <div className="col-md-12 py-3 fw-bold text-center"></div>
-                        <div className="col-md-1"></div>
-
-                        <div className="col-md-4 text-center  py-5 shadow">
-                            <Link to={"/admin/viewpackage"} style={{ textDecoration: "none" }}><br /><h1>Total User {data.totalCustomer}</h1>
-
-                            </Link>
-
-                        </div>
-                        {/* <div className="col-md-2"></div>
-                        <div className="col-md-4 text-center  py-5 shadow">
-                            <Link to={"/admin/viewuser"} style={{ textDecoration: "none" }}><br /><h1>Total User {data.totalCustomer}</h1>
-
-                            </Link>
-
-                        </div> */}
-
-
-
-                    </div>
-                </div>
+      {/* Dashboard Cards Section */}
+      <div
+        className="container-fluid"
+        style={{ backgroundColor: "#f8f9fa", minHeight: "60vh" }}
+      >
+        <div className="container py-5">
+          <div className="row pb-5">
+            <div className="col-md-12 py-5 text-center mb-5">
+              <h1 className="fw-bold" style={{ color: "#212529" }}>
+                Welcome to Admin Dashboard
+              </h1>
             </div>
-     
 
-        </>
+            {/* Card 1 */}
+            <div className="col-md-4 mb-4">
+              <div className="card dashboard-card shadow-sm text-center red-card">
+                <div className="card-body py-5">
+                  <Link
+                    to="/admin/viewcategory"
+                    style={{
+                      textDecoration: "none",
+                      color: "#fff",
+                      fontWeight: "700",
+                      fontSize: "1.5rem",
+                    }}
+                  >
+                    Total Category: {data.totalservice}
+                  </Link>
+                </div>
+              </div>
+            </div>
 
-    )
+            {/* Card 2 */}
+            <div className="col-md-4 mb-4">
+              <div className="card dashboard-card shadow-sm text-center red-card">
+                <div className="card-body py-5">
+                  <Link
+                    to="/admin/viewsubcategory"
+                    style={{
+                      textDecoration: "none",
+                      color: "#fff",
+                      fontWeight: "700",
+                      fontSize: "1.5rem",
+                    }}
+                  >
+                    Total Subcategory: {data.totalsubservice}
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="col-md-4 mb-4">
+              <div className="card dashboard-card shadow-sm text-center red-card">
+                <div className="card-body py-5">
+                  <Link
+                    to="/admin/viewpackage"
+                    style={{
+                      textDecoration: "none",
+                      color: "#fff",
+                      fontWeight: "700",
+                      fontSize: "1.5rem",
+                    }}
+                  >
+                    Total Customers: {data.totalCustomer}
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Hover and Custom Styles */}
+      <style>{`
+        .dashboard-card.red-card {
+          background: linear-gradient(135deg, #f44336, #dc3545);
+          color: #fff;
+          border: none;
+          border-radius: 1rem;
+          transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        }
+
+        .dashboard-card.red-card:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 10px 25px rgba(220, 53, 69, 0.4);
+          background: linear-gradient(135deg, #c82333, #a71d2a);
+        }
+      `}</style>
+    </>
+  );
 }
-export default Dashboard
 
-
+export default Dashboard;

@@ -163,12 +163,12 @@ const updateItem = (req, res) => {
                     if (req.body.itemName)
                         categoryData.itemName = req.body.itemName
                     if (req.body.itemDes)
-                        categoryData.itemDes = req.body.itemDes     
+                        categoryData.itemDes = req.body.itemDes
                     if (req.body.itemPrice)
-                        categoryData.itemPrice = req.body.itemPrice    
+                        categoryData.itemPrice = req.body.itemPrice
                     if (req.body.itemshippingCharge)
-                        categoryData.itemshippingCharge = req.body.itemshippingCharge    
-                    
+                        categoryData.itemshippingCharge = req.body.itemshippingCharge
+
                     categoryData.save()
                         .then((categoryData) => {
                             res.send({

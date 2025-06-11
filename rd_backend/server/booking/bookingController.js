@@ -6,7 +6,6 @@ const addBooking = (req, res) => {
     if (!req.body.itemPrice) {
         validationerror.push("itemPrice is required")
     }
-   
     if (!req.body.accountHolderName) {
         validationerror.push("accountHolderName is required")
     }
@@ -47,7 +46,7 @@ const addBooking = (req, res) => {
                                 data: saveData
                             })
                         })
-                        .catch(err=> {
+                        .catch(err => {
                             res.send({
                                 status: 500,
                                 success: false,
@@ -62,8 +61,6 @@ const addBooking = (req, res) => {
                         status: 400,
                         success: false,
                         message: "Record is already exist",
-
-
                     })
                 }
             })
@@ -75,13 +72,11 @@ const addBooking = (req, res) => {
                     error: err.message
                 })
             })
-
     }
 }
 
 const getAllBooking = (req, res) => {
     Booking.find()
-
         .then(bookData => {
             res.send({
                 status: 200,
@@ -99,55 +94,55 @@ const getAllBooking = (req, res) => {
             })
         })
 }
-changeStatus=(req,res)=>{
-    var validationerror=[]
-    if(!req.body._id)
+
+changeStatus = (req, res) => {
+    var validationerror = []
+    if (!req.body._id)
         validationerror.push("id is required")
-    if(!req.body.status)
+    if (!req.body.status)
         validationerror.push("status is required")
-    if(validationerror.length>0){
+    if (validationerror.length > 0) {
         res.send({
-            success:false,
-            status:420,
-            message:"Validation error",
-            error:validationerror,
+            success: false,
+            status: 420,
+            message: "Validation error",
+            error: validationerror,
         })
     }
-    else{
-            Booking.findOne({_id:req.body._id})
-            .then(bookData=>{
-                if(!bookData){
+    else {
+        Booking.findOne({ _id: req.body._id })
+            .then(bookData => {
+                if (!bookData) {
                     res.send({
-                        success:false,
-                        status:404,
-                        message:"Data not found",
-                        data:bookData
+                        success: false,
+                        status: 404,
+                        message: "Data not found",
+                        data: bookData
                     })
                 }
-                else{
-                    if(req.body.status)
-                    bookData.status=req.body.status
+                else {
+                    if (req.body.status)
+                        bookData.status = req.body.status
                     bookData.save()
-                    .then(bookData=>{
-                        res.send({
-                            success:true,
-                            status:200,
-                            message:"updated status",
-                            data:bookData
+                        .then(bookData => {
+                            res.send({
+                                success: true,
+                                status: 200,
+                                message: "updated status",
+                                data: bookData
+                            })
                         })
-                    })
-                    .catch(err=>{
-                        res.send({
-                            success:false,
-                            status:500,
-                            message:"Internal server error",
-                            error:err.message
+                        .catch(err => {
+                            res.send({
+                                success: false,
+                                status: 500,
+                                message: "Internal server error",
+                                error: err.message
+                            })
                         })
-                    })
                 }
-
             })
     }
 }
 
-module.exports = { addBooking, getAllBooking,changeStatus }
+module.exports = { addBooking, getAllBooking, changeStatus }

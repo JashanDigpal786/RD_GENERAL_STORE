@@ -141,10 +141,10 @@ const login = (req, res) => {
                     message: "Internal server error",
                     error: err.message
                 })
-
             })
     }
 }
+
 const getAllCustomer = (req, res) => {
     Customer.find()
         .then(userdata => {
@@ -164,4 +164,5 @@ const getAllCustomer = (req, res) => {
             })
         })
 }
+
 module.exports = { register, login, getAllCustomer }

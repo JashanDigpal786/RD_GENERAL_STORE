@@ -11,7 +11,6 @@ const addCategory = (req, res) => {
     if (!req.body.description) {
         validationerror.push("description is required")
     }
-
     if (validationerror.length > 0) {
         res.send({
             success: false,
@@ -28,7 +27,7 @@ const addCategory = (req, res) => {
                     let categoryObj = new Category()
                     // categoryObj.autoId = total + 1
                     categoryObj.categoryName = req.body.categoryName
-                    categoryObj.thumbnail="categoryimages/"+req.body.thumbnail
+                    categoryObj.thumbnail = "categoryimages/" + req.body.thumbnail
                     categoryObj.description = req.body.description
                     categoryObj.save()
                         .then(saveData => {
@@ -149,14 +148,13 @@ const updateCategory = (req, res) => {
                     if (req.body.categoryName) {
                         categoryData.categoryName = req.body.categoryName
                     }
-                       if (req.body.thumbnail) {
-                        categoryData.thumbnail ="categoryimages/"+req.body.thumbnail
+                    if (req.body.thumbnail) {
+                        categoryData.thumbnail = "categoryimages/" + req.body.thumbnail
                     }
                     if (req.body.description) {
                         categoryData.description = req.body.description
                     }
                     categoryData.save()
-
                         .then((categoryData) => {
                             res.send({
                                 status: 200,
@@ -186,6 +184,7 @@ const updateCategory = (req, res) => {
             })
     }
 }
+
 const deleteCategory = (req, res) => {
     var validationerror = []
     if (!req.body._id)

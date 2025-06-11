@@ -5,7 +5,7 @@ function Shop() {
         <>
             <div className="container-fluid fruite py-5">
                 <div className="container py-5">
-                    
+
                     <h1 className="mb-4">Fresh fruits shop</h1>
 
                     <div className="row g-4">

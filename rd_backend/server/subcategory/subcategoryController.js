@@ -139,7 +139,7 @@ const updatesubCategory = (req, res) => {
     var validationerror = []
     if (!req.body._id)
         validationerror.push("_id is required")
-    
+
     if (validationerror.length) {
         res.send({
             status: 420,
@@ -159,8 +159,8 @@ const updatesubCategory = (req, res) => {
                 } else {
                     if (req.body.categoryId)
                         subcategoryData.categoryId = req.body.categoryId
-                      if (req.body.thumbnail) {
-                        subcategoryData.thumbnail ="subcategoryimages/"+req.body.thumbnail
+                    if (req.body.thumbnail) {
+                        subcategoryData.thumbnail = "subcategoryimages/" + req.body.thumbnail
                     }
                     if (req.body.subcategoryName)
                         subcategoryData.subcategoryName = req.body.subcategoryName
@@ -235,10 +235,4 @@ const deletesubCategory = (req, res) => {
     }
 }
 
-module.exports = {
-    addsubCategory,
-    getAllsubCategory,
-    singlesubCategoryData,
-    updatesubCategory,
-    deletesubCategory
-}
+module.exports = { addsubCategory, getAllsubCategory, singlesubCategoryData, updatesubCategory, deletesubCategory }

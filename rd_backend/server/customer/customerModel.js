@@ -10,4 +10,5 @@ const customerSchema = new mongoose.Schema({
     status: { type: Boolean, default: true },
     createdAt: { type: Date, default: Date.now() }
 })
+
 module.exports = new mongoose.model('customer', customerSchema)
